@@ -1,0 +1,6 @@
+applications:
+  - name: lovelybells
+    buildpack: default
+    path: target/Search-Interface.jar
+    services:
+      - test
