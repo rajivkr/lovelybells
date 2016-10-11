@@ -1,5 +1,5 @@
 applications:
-  - name: weddingdiaries
+  - name: com.bells.lovely.search-interface
     buildpack: default
     path: target/Search-Interface.jar
     services:
