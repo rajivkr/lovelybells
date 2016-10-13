@@ -21,7 +21,7 @@ public class CarController {
 	@Autowired
 	CarSearchRepository carSearchRepository;
 	
-	@RequestMapping("/health")
+	@RequestMapping(value="/health",method = RequestMethod.GET)
 	public String health() {
 		return "health";
 	}
