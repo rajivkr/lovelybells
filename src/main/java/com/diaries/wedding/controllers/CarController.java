@@ -21,6 +21,11 @@ public class CarController {
 	@Autowired
 	CarSearchRepository carSearchRepository;
 	
+	@RequestMapping("/health")
+	public String health() {
+		return "<html><head><h1>Lovely Bells</h1></head></html>";
+	}
+	
 	@RequestMapping("/home")
 	public String home(Model model) {
 		model.addAttribute("carList", carRepository.findAll());

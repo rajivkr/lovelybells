@@ -8,8 +8,8 @@ jdk:
 deploy:
    edge: true
    provider: cloudfoundry
-   username: gsarathkumar92@yahoo.in
-   password: SMILE7day@
+   username: bells.lovely2016@gmail.com
+   password: Pivotal.io1
    api: https://api.run.pivotal.io
    organization: StudentManagement
    space: lovelybells
