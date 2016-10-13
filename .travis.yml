@@ -11,5 +11,5 @@ deploy:
    username: bells.lovely2016@gmail.com
    password: Pivotal.io1
    api: https://api.run.pivotal.io
-   organization: StudentManagement
-   space: lovelybells
+   organization: lovelybells
+   space: development
