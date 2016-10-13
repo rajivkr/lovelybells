@@ -23,7 +23,7 @@ public class CarController {
 	
 	@RequestMapping("/health")
 	public String health() {
-		return "<html><head><h1>Lovely Bells</h1></head></html>";
+		return "health";
 	}
 	
 	@RequestMapping("/home")

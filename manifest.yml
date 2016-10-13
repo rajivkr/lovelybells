@@ -1,5 +1,5 @@
 applications:
-  - name: com.bells.lovely.search-interface
+  - name: com.bells.lovely.common.interface
     buildpack: default
     path: target/Search-Interface.jar
     services:
