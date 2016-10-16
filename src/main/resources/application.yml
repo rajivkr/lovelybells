@@ -1,11 +1,11 @@
 spring:
  profiles:
-    active: development
+    active: dev
 server:
  port: 20000
 ---
 spring:
- profiles: development
+ profiles: dev
  data:
   mongodb:
    database: sitesurvey
