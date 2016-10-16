@@ -6,11 +6,11 @@ import org.springframework.data.mongodb.repository.config.EnableMongoRepositorie
 
 @SpringBootApplication
 @EnableMongoRepositories("com.diaries.wedding.repository")
-public class MongoTutorialApplication {
+public class LovelyBellsApplication {
 
 	
 	public static void main(String[] args) {
-		SpringApplication.run(MongoTutorialApplication.class, args);
+		SpringApplication.run(LovelyBellsApplication.class, args);
 	}
 	
 	public void run() {

@@ -6,12 +6,12 @@ import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
 
-import com.diaries.wedding.MongoTutorialApplication;
+import com.diaries.wedding.LovelyBellsApplication;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@SpringApplicationConfiguration(classes = MongoTutorialApplication.class)
+@SpringApplicationConfiguration(classes = LovelyBellsApplication.class)
 @WebAppConfiguration
-public class MongoTutorialApplicationTests {
+public class LovelyBellsApplicationTests {
 
 	@Test
 	public void contextLoads() {

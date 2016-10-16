@@ -1,0 +1,25 @@
+spring:
+ profiles:
+    active: development
+server:
+ port: 20000
+---
+spring:
+ profiles: development
+ data:
+  mongodb:
+   database: sitesurvey
+   host: ds017514.mlab.com
+   port: 17514
+   username: rajiv
+   password: rajivkr
+---
+spring:
+ profiles: cloud
+ data:
+  mongodb:
+   database: sitesurvey
+   host: ds017514.mlab.com
+   port: 17514
+   username: rajiv
+   password: rajivkr
