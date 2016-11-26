@@ -1,4 +1,4 @@
-package app.model;
+package  com.diaries.wedding.model;
 
 public class FeatureCategoryValues {
 private String subFeatureCategoryTitle;

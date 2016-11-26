@@ -1,4 +1,4 @@
-package app.model;
+package com.diaries.wedding.model;
 
 public class OtherHighlights {
 private String category;

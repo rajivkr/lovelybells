@@ -1,4 +1,4 @@
-package app.model;
+package  com.diaries.wedding.model;
 import java.util.*;
 
 public class Halls {

@@ -1,4 +1,4 @@
-package app.controller;
+package com.diaries.wedding.controllers;
 
 import java.io.IOException;
 import java.util.*;
@@ -16,8 +16,8 @@ import org.springframework.web.multipart.MultipartFile;
 
 import com.mongodb.gridfs.GridFSDBFile;
 
-import app.model.*;
-import app.repository.VenueRepository;
+import com.diaries.wedding.model.*;
+import com.diaries.wedding.repository.VenueRepository;
 
 
 @RestController
@@ -55,6 +55,12 @@ public class VenueController {
 		Venue v[]=new Venue[10];
 		return v;
 	}*/
+	@RequestMapping(value="/{id}",method=RequestMethod.GET)
+	public Venue searchById(@PathVariable("id")String id){
+		Venue ven=(Venue) venueRepository.findById(id);
+
+	    return ven;
+	}
 	@RequestMapping(path = "/location/{state}/{city}", method = RequestMethod.GET)
 	public List<Venue> searchLoc(@PathVariable("state")String state,@PathVariable("city")String city){
 		/*Query query=new Query();
