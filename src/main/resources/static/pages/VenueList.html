@@ -1,0 +1,115 @@
+<h2 class="header">Your Venues</h2>
+<div ng-controller="VenueController">
+    <div ng-repeat="venue in venueList">
+        <div class="col-sm-12">
+            <div class="venue-card venue-details">
+                <div class="left-section">
+                    <a target="_blank" href="/hyderabad/gjr-gardens-kukatpally/" title="GJR Gardens  | Kukatpally | Hyderabad">
+
+                        <div class="image-box lazy venue-image" data-original="http://media.weddingz.in/images/ba43bbcc420885e28bd50a826d0671a1/gjrhd.jpg" title="GJR Gardens  | Kukatpally | Hyderabad" style="display: block; background-image: url(&quot;http://media.weddingz.in/images/ba43bbcc420885e28bd50a826d0671a1/gjrhd.jpg&quot;);">
+                            <div class="image-overlay"></div>
+                            <div class="top-actions">
+                                <div class="ven-icons">
+
+                                    <i class="fa fa-check featured-marker" title="Featured"></i>
+
+
+
+                                </div>
+                                <div class="recommend" title="Recommended">
+                                    <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                                    1
+                                </div>
+
+
+                            </div>
+                            <div class="bottom-counts">
+
+
+                                <div class="photo-count">
+                                    <i class="fa fa-camera" aria-hidden="true"></i>
+                                    <div class="count"><span>4</span> photos</div>
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                        <div class="info-box">
+                            <div class="venue-name">
+
+                                <h2>{{venue.name}}</h2>
+
+                    </a>
+                </div>
+                <div class="venue-address" title="Vijaypuri Colony, Bairamalguda, Hyderabad, Hyderabad, Andhra Pradesh 500074 ">
+                    <i class="fa fa-map-marker" aria-hidden="true"></i> {{venue.address}}
+                </div>
+                <div class="venue-desc">
+                    {{venue.shortDescr}}
+                    <!--<a target="_blank" href="#" title="GJR Gardens , Kukatpally">Read More</a>-->
+                </div>
+                <div class="venue-highlights">
+
+                    <div class="high-title">HIGHLIGHTS</div>
+                    <ul class="sidebar-highlights">
+                        <li ng-repeat="highlight in venue.otherHighlights">
+                            <span ng-class="highlight.isAvailable =='1' ? 'fa fa-check color-green':'fa fa-times color-red'" aria-hidden="true"></span>
+                            {{highlight.category}}
+                        </li>
+                    </ul>
+                    <!--<div class="collapse" id="collapseHighlights3909" aria-expanded="false" style="height: 0px;">
+                        <ul>
+
+                        </ul>
+                    </div>-->
+                </div>
+                <div class="row">
+                    <div class="col-sm-7">
+                        <div class="venue-types-list">
+                            <ul>
+                                <li>
+                                    <a href="#" title="Wedding Banquet Halls in hyderabad | Marriage Halls hyderabad">Banquet Halls</a>
+                                </li>
+
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-5">
+                        <div class="venue-score" title="Recommendations Last Month">
+                            Unrated
+                        </div>
+                        <div class="venue-score" title="Recommendations Last Month">
+                            Shortlisted: <span> 5 </span>
+                        </div>
+                        <div class="venue-score" title="Bookings Last Month">
+                            Bookings: <span> 0 </span>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right-section">
+            <div class="price">
+                <sm class="strike"><price>N/A</price></sm>
+                <p>Price per Plate</p>
+            </div>
+            <div class="pax venue-pax">
+                <p>
+                    <img data-original="https://d23aex6kzd4ahz.cloudfront.net/img/chair.png"
+                         class="lazy" src="https://d23aex6kzd4ahz.cloudfront.net/img/chair.png" style="display: inline;"> <span> 1100 - 3000 </span>PAX
+                </p>
+            </div>
+            <div class="bottom-actions">
+                <a href="#" data-target="#get_quote" data-product-id="3909"
+                   data-category-id="venue" title="GJR Gardens , Kukatpally"
+                   class="btn btn-default btn-block view-btn btn-get-quote" data-form-id="get_quote" data-source="website-quote" data-service="venue">Get Quote</a>
+                <button class="btn btn-default btn-block view-btn btn-get-quote" ng-click="getFullVenue(venue.id)">View Venue</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+  <!--</div>-->

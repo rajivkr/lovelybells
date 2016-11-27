@@ -1,0 +1,414 @@
+<html ng-app>
+<head>
+ <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Student Admission form</title>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+  	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/lodash/4.15.0/lodash.min.js"></script>
+  <script>
+  $( function() {
+    $( ".datepicker" ).datepicker();
+  } );
+  </script>
+</head>
+<body>
+<div id="page-wrapper" class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">Forms</h1>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Application for Admission
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <form role="form">
+                                        <div class="form-group" ng-init="hello='world'">
+                                            <label>Name of the Pupil {{hello}}</label>
+                                            <input class="form-control">
+                                            <p class="help-block">(in block letters)</p>
+                                        </div>
+										<div class="form-group">
+                                            <label>Date Of Birth</label>
+                                            <input class="form-control .datepicker" type="text"/>
+                                        </div>
+										<div class="form-group">
+                                            <label>Place Of Birth</label>
+                                            <input class="form-control type="text"/>
+                                        </div>
+										<div class="form-group">
+                                            <label>Mother Tongue</label>
+                                            <input class="form-control type="text"/>
+                                        </div>
+										<div class="form-group">
+                                            <label>Nationality</label>
+                                            <input class="form-control type="text"/>
+                                        </div>
+										<div class="form-group">
+                                            <label>Religion</label>
+                                            <div class="radio">
+                                                <label>
+                                                    <input type="radio" name="religionRadios" id="MuslimRadio" value="Muslim" checked>Muslim
+                                                </label>
+                                            </div>
+                                            <div class="radio">
+                                                <label>
+                                                    <input type="radio" name="religionRadios" id="HinduRadio" value="Hindu">Hindu
+                                                </label>
+                                            </div>
+                                            <div class="radio">
+                                                <label>
+                                                    <input type="radio" name="religionRadios" id="ChristianRadio" value="Christian">Christian
+                                                </label>
+                                            </div>
+											<div class="radio">
+                                                <label>
+                                                    <input type="radio" name="religionRadios" id="OthersRadio" value="Others">Others
+                                                </label>
+                                            </div>
+                                        </div>
+										
+										<div class="form-group">
+                                            <label>Community</label>
+                                            <div class="radio">
+                                                <label>
+                                                    <input type="radio" name="communityRadios" id="SCRadio" value="SC" checked>SC
+                                                </label>
+                                            </div>
+                                            <div class="radio">
+                                                <label>
+                                                    <input type="radio" name="communityRadios" id="STRadio" value="ST">ST
+                                                </label>
+                                            </div>
+                                            <div class="radio">
+                                                <label>
+                                                    <input type="radio" name="communityRadios" id="SSRadio" value="SS">SS
+                                                </label>
+                                            </div>
+											<div class="radio">
+                                                <label>
+                                                    <input type="radio" name="communityRadios" id="SNRadio" value="SN">SN
+                                                </label>
+                                            </div>
+											
+											<div class="radio">
+                                                <label>
+                                                    <input type="radio" name="communityRadios" id="MBCRadio" value="MBC" checked>MBC
+                                                </label>
+                                            </div>
+                                            <div class="radio">
+                                                <label>
+                                                    <input type="radio" name="communityRadios" id="OBCRadio" value="OBC">OBC
+                                                </label>
+                                            </div>
+                                            <div class="radio">
+                                                <label>
+                                                    <input type="radio" name="communityRadios" id="OCRadio" value="OC">OC
+                                                </label>
+                                            </div>
+											<div class="radio">
+                                                <label>
+                                                    <input type="radio" name="communityRadios" id="DCRadio" value="DC">DC
+                                                </label>
+                                            </div>
+                                        </div>
+										<h1>Details Of Parents</h1>
+										<h2>Father</h2>
+										<div class="form-group">
+                                            <label>Name</label>
+                                            <input class="form-control type="text"/>
+                                        </div>
+										<div class="form-group">
+                                            <label>Educational Qualification</label>
+                                            <input class="form-control type="text"/>
+                                        </div>
+										<div class="form-group">
+                                            <label>Occupation</label>
+                                            <input class="form-control type="text"/>
+                                        </div>
+										<h2>Mother</h2>
+										<div class="form-group">
+                                            <label>Name</label>
+                                            <input class="form-control type="text"/>
+                                        </div>
+										<div class="form-group">
+                                            <label>Educational Qualification</label>
+                                            <input class="form-control type="text"/>
+                                        </div>
+										<div class="form-group">
+                                            <label>Occupation</label>
+                                            <input class="form-control type="text"/>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Attach Documents</label>
+                                            <input type="file">
+                                        </div>
+										<h1>Contact - Residential</h1>
+                                        <div class="form-group">
+                                            <label>Residential Address</label>
+                                            <textarea class="form-control" rows="3"></textarea>
+                                        </div>
+										<div class="form-group">
+                                            <label>Telephone</label>
+                                            <input class="form-control type="text"/>
+                                        </div>
+										<div class="form-group">
+                                            <label>Mobile</label>
+                                            <input class="form-control type="text"/>
+                                        </div>
+										<div class="form-group">
+                                            <label>Fax</label>
+                                            <input class="form-control type="text"/>
+                                        </div>
+										<div class="form-group">
+										<label>Email</label>
+                                            <input type="text" class="form-control" placeholder="johnsmith@gmail.com">
+                                        </div>
+										<h1>Contact - Father</h1>
+                                        <div class="form-group">
+                                            <label>Business/Office Address</label>
+                                            <textarea class="form-control" rows="3"></textarea>
+                                        </div>
+										<div class="form-group">
+                                            <label>Telephone</label>
+                                            <input class="form-control type="text"/>
+                                        </div>
+										<div class="form-group">
+                                            <label>Mobile</label>
+                                            <input class="form-control type="text"/>
+                                        </div>
+										<div class="form-group">
+                                            <label>Fax</label>
+                                            <input class="form-control type="text"/>
+                                        </div>
+										<div class="form-group">
+                                            <label>E-mail</label>
+                                            <input class="form-control type="text"/>
+                                        </div>
+										<h1>Contact For Communication</h1>
+                                        <div class="form-group">
+                                            <label>Address For Communication</label>
+                                            <textarea class="form-control" rows="3"></textarea>
+                                        </div>
+										<div class="form-group">
+                                            <label>Telephone</label>
+                                            <input class="form-control type="text"/>
+                                        </div>
+										<div class="form-group">
+                                            <label>Mobile</label>
+                                            <input class="form-control type="text"/>
+                                        </div>
+										<div class="form-group">
+                                            <label>Fax</label>
+                                            <input class="form-control type="text"/>
+                                        </div>
+										<div class="form-group">
+										<label>Email</label>
+                                            <input type="text" class="form-control" placeholder="johnsmith@gmail.com">
+                                        </div>
+										<div class="form-group">
+                                            <label>Class to which admission is sought</label>
+                                            <input class="form-control type="text"/>
+                                        </div>
+										<div class="form-group">
+                                            <label>First Language</label>
+                                            <div class="radio">
+                                                <label>
+                                                    <input type="radio" name="fLRadios" id="tamilRadio" value="Tamil" checked>Tamil
+                                                </label>
+                                            </div>
+                                            <div class="radio">
+                                                <label>
+                                                    <input type="radio" name="fLRadios" id="hindiRadio" value="Hindi">Hindi
+                                                </label>
+                                            </div>
+                                            <div class="radio">
+                                                <label>
+                                                    <input type="radio" name="fLRadios" id="arabicRadio" value="Arabic">Arabic
+                                                </label>
+                                            </div>
+                                        </div>
+										<div class="form-group">
+                                            <label>Class and school studied last year</label>
+                                            <input class="form-control type="text"/>
+                                        </div>
+                                       
+                                        
+										
+										 <div class="form-group">
+                                            <label>Proficiency in Co-curricular activities and extra curricular activities</label>
+                                            <textarea class="form-control" rows="3"></textarea>
+                                        </div>
+										
+										<div class="form-group">
+                                            <label>Has the student lived in a hostel or away from his parents anytime? <br/> If yes give details</label>
+                                            <textarea class="form-control" rows="3"></textarea>
+                                        </div>
+										
+										<!-- <div class="form-group">
+                                            <label>Inline Checkboxes</label>
+                                            <label class="checkbox-inline">
+                                                <input type="checkbox">1
+                                            </label>
+                                            <label class="checkbox-inline">
+                                                <input type="checkbox">2
+                                            </label>
+                                            <label class="checkbox-inline">
+                                                <input type="checkbox">3
+                                            </label>
+                                        </div> -->
+                                        <!-- <div class="form-group">
+                                            <label>Radio Buttons</label>
+                                            <div class="radio">
+                                                <label>
+                                                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>Radio 1
+                                                </label>
+                                            </div>
+                                            <div class="radio">
+                                                <label>
+                                                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">Radio 2
+                                                </label>
+                                            </div>
+                                            <div class="radio">
+                                                <label>
+                                                    <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">Radio 3
+                                                </label>
+                                            </div>
+                                        </div> -->
+                                       <!--  <div class="form-group">
+                                            <label>Inline Radio Buttons</label>
+                                            <label class="radio-inline">
+                                                <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline1" value="option1" checked>1
+                                            </label>
+                                            <label class="radio-inline">
+                                                <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline2" value="option2">2
+                                            </label>
+                                            <label class="radio-inline">
+                                                <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline3" value="option3">3
+                                            </label>
+                                        </div> -->
+                                      <!--   <div class="form-group">
+                                            <label>Selects</label>
+                                            <select class="form-control">
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Multiple Selects</label>
+                                            <select multiple class="form-control">
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                            </select>
+                                        </div> -->
+                                        <button type="submit" class="btn btn-default">Submit Button</button>
+                                        <button type="reset" class="btn btn-default">Reset Button</button>
+                                    </form>
+                                </div>
+                                <!-- /.col-lg-6 (nested) -->
+                                <!-- <div class="col-lg-6">
+                                    <h1>Disabled Form States</h1>
+                                    <form role="form">
+                                        <fieldset disabled>
+                                            <div class="form-group">
+                                                <label for="disabledSelect">Disabled input</label>
+                                                <input class="form-control" id="disabledInput" type="text" placeholder="Disabled input" disabled>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="disabledSelect">Disabled select menu</label>
+                                                <select id="disabledSelect" class="form-control">
+                                                    <option>Disabled select</option>
+                                                </select>
+                                            </div>
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input type="checkbox">Disabled Checkbox
+                                                </label>
+                                            </div>
+                                            <button type="submit" class="btn btn-primary">Disabled Button</button>
+                                        </fieldset>
+                                    </form>
+                                    <h1>Form Validation States</h1>
+                                    <form role="form">
+                                        <div class="form-group has-success">
+                                            <label class="control-label" for="inputSuccess">Input with success</label>
+                                            <input type="text" class="form-control" id="inputSuccess">
+                                        </div>
+                                        <div class="form-group has-warning">
+                                            <label class="control-label" for="inputWarning">Input with warning</label>
+                                            <input type="text" class="form-control" id="inputWarning">
+                                        </div>
+                                        <div class="form-group has-error">
+                                            <label class="control-label" for="inputError">Input with error</label>
+                                            <input type="text" class="form-control" id="inputError">
+                                        </div>
+                                    </form>
+                                    <h1>Input Groups</h1>
+                                    <form role="form">
+                                        <div class="form-group input-group">
+                                            <span class="input-group-addon">@</span>
+                                            <input type="text" class="form-control" placeholder="Username">
+                                        </div>
+                                        <div class="form-group input-group">
+                                            <input type="text" class="form-control">
+                                            <span class="input-group-addon">.00</span>
+                                        </div>
+                                        <div class="form-group input-group">
+                                            <span class="input-group-addon"><i class="fa fa-eur"></i>
+                                            </span>
+                                            <input type="text" class="form-control" placeholder="Font Awesome Icon">
+                                        </div>
+                                        <div class="form-group input-group">
+                                            <span class="input-group-addon">$</span>
+                                            <input type="text" class="form-control">
+                                            <span class="input-group-addon">.00</span>
+                                        </div>
+                                        <div class="form-group input-group">
+                                            <input type="text" class="form-control">
+                                            <span class="input-group-btn">
+                                                <button class="btn btn-default" type="button"><i class="fa fa-search"></i>
+                                                </button>
+                                            </span>
+                                        </div>
+                                    </form>
+                                </div> -->
+                                <!-- /.col-lg-6 (nested) -->
+                            </div>
+                            <!-- /.row (nested) -->
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+        </div>
+		
+		<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <!-- /#page-wrapper -->
+		</body>
+</html>

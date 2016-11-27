@@ -1,0 +1,125 @@
+﻿<div id="ViewVenue" ng-controller="VenueController">
+    <!-- /.row -->
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="jumbotron">
+                <h1>{{venueView.name}}</h1>
+                <p>{{venueView.shortDescr}}</p>
+
+            </div>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+    <div class="row">
+        <!-- <div class="col-lg-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Default Panel
+                </div>
+                <div class="panel-body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.</p>
+                </div>
+                <div class="panel-footer">
+                    Panel Footer
+                </div>
+            </div>
+        </div> -->
+        <!-- /.col-lg-4 -->
+        <div class="col-lg-10">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3> {{venueView.name}} - Seating Capacity</h3>
+                </div>
+                <div class="panel-body">
+                    <h1>{{venueView.seating}} - Seating Capacity*  {{venueView.floating}} - Floating Capacity*</h1>
+                </div>
+                <div class="panel-footer">
+                    * As per May 2016
+                </div>
+            </div>
+        </div>
+
+        <!-- /.col-lg-12 -->
+    </div>
+    <div class="row">
+        <div class="col-lg-4" ng-repeat="hall in venueView.halls">
+            <div class="well">
+                <h4>{{hall.hallName}}</h4>
+                <p>{{hall.shortDescription}}</p>
+                <p> {{hall.seating}} seating capacity {{hall.floating}} floating capacity</p>
+                <p> {{hall.carCapacity}} Car Parking {{hall.bikeCapacity}} Bike Parking</p>
+                <p> Veg Price/Plate - Rs.{{hall.vegPrice}} Non-Veg Price/Plate - Rs.{{hall.nonVegPrice}}</p>
+                <p>The Hall is <span ng-if="(hall.isBuffetAvailable == '0')">not</span> air-conditioned</p>
+                <p>Buffet is <span ng-if="(hall.isBuffetAvailable == '0')">not</span> available</p>
+            </div>
+        </div>
+        <!-- /.col-lg-4 -->
+        <!-- /.col-lg-4 -->
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <h3 class="page-header">{{venueView.name}} - {{venueView.featureTitle}}</h3>
+            <p>{{venueView.featureDescr}}</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-4" ng-repeat="featureCategory in venueView.featureValues">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                   {{featureCategory.featureCategoryTitle}}
+                </div>
+                <div class="panel-body">
+                    <p ng-repeat="featureSubCategory in featureCategory.featureCategoryValues"><b>{{featureSubCategory.featureSubCategoryTitle}} : </b> 
+                    {{featureSubCategory.featureSubCategoryValue}}</p>
+                </div>
+                <div class="panel-footer">
+                    * As Mentioned by the Vendor
+                </div>
+            </div>
+        </div>
+        <!-- /.col-lg-4 -->
+        <!-- /.col-lg-4 -->
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <h3 class="page-header">{{venueView.name}} - Other Highlights</h3>
+        </div>
+        <ul class="sidebar-highlights" style="list-style:none">
+            <li ng-repeat="highlight in venueView.otherHighlights">
+                <span ng-class="highlight.isAvailable =='1' ? 'fa fa-check color-green':'fa fa-times color-red'" aria-hidden="true"></span>
+                {{highlight.category}}
+            </li>
+        </ul>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <h3 class="page-header">{{venueView.name}} - MENU PACKAGES</h3>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-lg-4" ng-repeat="menuItem in venueView.menus">
+            <div class="panel panel-success">
+                <div class="panel-heading">
+                    {{menuItem.menuTitle}} <span class="pull-right">Rs.{{menuItem.price}}</span>
+                </div>
+                <div class="panel-body">
+                    <b>Menu Item <span class="pull-right">No:Of Types</span></b>
+                    <p ng-repeat="menuItemType in menuItem.items">{{menuItemType.itemName}} <span class="pull-right">{{menuItemType.types.length}}</span></p>
+                </div>
+                <div class="panel-footer">
+                    * As Mentioned By the Vendor
+                </div>
+            </div>
+        </div>
+        <!-- /.col-lg-4 -->
+        <!-- /.col-lg-4 -->
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <h3 class="page-header">Venue name - GALLERY</h3>
+        </div>
+    </div>
+    <!-- /.col-lg-4 -->
+</div>
