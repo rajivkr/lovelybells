@@ -10,7 +10,7 @@ public class LovelyBellsApplication {
 
 	
 	public static void main(String[] args) {
-		SpringApplication.run(LovelyBellsApplication.class, args);
+		SpringApplication.run(LovelyBellsApplication.class, args); 
 	}
 	
 	public void run() {
