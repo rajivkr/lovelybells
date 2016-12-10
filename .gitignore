@@ -7,3 +7,4 @@ mvnw
 mvnw.cmd
 .springBeans
 assets/
+/bin/

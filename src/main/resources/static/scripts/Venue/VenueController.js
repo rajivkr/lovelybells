@@ -100,11 +100,18 @@ app.controller('VenueController', ['$scope', 'VenueService','$location', functio
         $scope.venueViewModel.shortVenueDetails.state = $scope.venueViewModel.state;
         $scope.venueViewModel.shortVenueDetails.city = $scope.venueViewModel.city;
         $scope.venueViewModel.shortVenueDetails.area = $scope.venueViewModel.area;
-        console.log(JSON.stringify($scope.venueViewModel))
-        VenueService.addVenue($scope.venueViewModel).then(function (data) {
-            console.log(data);
-        })
-
+         validate();
+        if ($scope.validationPassed)
+        {
+         alert("Validation Passed")
+          VenueService.addVenue($scope.venueViewModel).then(function (data) {
+              alert("Value Submitted")
+              $location.path('/VenueList');
+          })
+          }
+        else
+            alert("Validation failed")
+       
 
     };
     var listOfVenues = JSON.parse('{ "featureValues": [], "otherHighlights": [{ "category": "Sarakku", "isAvailable": "0" }, { "category": "Dabaanguthu", "isAvailable": "1" }, { "category": "Gaana paatu", "isAvailable": "1" }], "halls": [], "menus": [], "shortVenueDetails": { "name": "Alexanders Hall", "address": "23/8,10th Street Vinbhaji Nagar, Hasthinapuram,Chennai - 64", "shortDescr": "Superb Hall with Good Ambience", "otherHighlights": [{ "category": "Sarakku", "isAvailable": "1" }, { "category": "Dabaanguthu", "isAvailable": "1" }, { "category": "Gaana paatu", "isAvailable": "1" }], "vegPrice": "2", "nonVegPrice": "2", "state": "TamilNadu", "city": "Chennai", "area": "Hasthinapuram" }, "name": "Alexanders Hall", "numOfHalls": "1", "venueRent": "2", "vegPrice": "2", "nonVegPrice": "2", "shortDescr": "Superb Hall with Good Ambience", "detailDescr": "Adhe dhaan", "historyOfBooking": "10", "budget": "High", "state": "TamilNadu", "city": "Chennai", "area": "Hasthinapuram", "featureTitle": "sdgsg", "featureDescr": "sdgsdg", "vendorName": "Alexander Immanuel D", "vendorType": "Marriage halls", "primaryMobile": "9940479677", "secondaryMobile": "9940479677", "percentageCommission": "10", "overallRatings": "5", "isUsingVendorApp": "1", "address": "23/8,10th Street Vinbhaji Nagar, Hasthinapuram,Chennai - 64" }');
@@ -147,19 +154,76 @@ app.controller('VenueController', ['$scope', 'VenueService','$location', functio
         )}
 
 
+    function validate()
+    {
+        $scope.validationPassed = true;
+        var alphaNumericRegex = /^[a-zA-Z0-9 ',.\-]+$/;
+        var numericRegex = /^[0-9]+$/;
+        var alphabeticRegex = /^[a-zA-Z ',.\-]+$/;
+        var prevValPassed = false;
+        $('[lb-required]').each(function () {
+            if ($(this).val().trim() == "") {
+                $(this).addClass('requiredErrorBorder')
+                $(this).parent().find('.required').text("This field is required");
+                $(this).parent().find('.required').show();
+                $scope.validationPassed = $scope.validationPassed && false;
 
+            }
+            else {
+                $(this).removeClass('requiredErrorBorder')
+                $(this).parent().find('.required').text("");
+                $(this).parent().find('.required').hide();
+                $scope.validationPassed = $scope.validationPassed && true;
+            }
+        })
+        $('[lb-alphanumeric]').each(function () {
+            if (!alphaNumericRegex.test($(this).val().trim()) && !$(this).val().trim() == "") {
+                $(this).addClass('alphanumericErrorBorder')
+                $(this).parent().find('.alphanumeric').text("This field should contain only alphanumeric characters");
+                $(this).parent().find('.alphanumeric').show();
+                $scope.validationPassed = $scope.validationPassed && false;
+
+            }
+            else {
+                $(this).removeClass('alphanumericErrorBorder')
+                $(this).parent().find('.alphanumeric').text("");
+                $(this).parent().find('.alphanumeric').hide();
+                $scope.validationPassed = $scope.validationPassed && true;
+            }
+        })
+        $('[lb-numeric]').each(function () {
+            if (!numericRegex.test($(this).val().trim()) && !$(this).val().trim() == "") {
+                $(this).addClass('numericErrorBorder')
+                $(this).parent().find('.numeric').text("This field should contain only numeric characters");
+                $(this).parent().find('.numeric').show();
+                $scope.validationPassed = $scope.validationPassed && false;
+
+            }
+            else {
+                $(this).removeClass('numericErrorBorder')
+                $(this).parent().find('.numeric').text("");
+                $(this).parent().find('.numeric').hide();
+                $scope.validationPassed = $scope.validationPassed && true;
+            }
+        })
+        $('[lb-alphabetic]').each(function () {
+            if (!alphabeticRegex.test($(this).val().trim()) && !$(this).val().trim() == "") {
+                $(this).addClass('alphabeticErrorBorder')
+                $(this).parent().find('.alphabetic').text("This field should contain only alphabetic characters");
+                $(this).parent().find('.alphabetic').show();
+                $scope.validationPassed = $scope.validationPassed && false;
+
+            }
+            else {
+                $(this).removeClass('alphabeticErrorBorder')
+                $(this).parent().find('.alphabetic').text("");
+                $(this).parent().find('.alphabetic').hide();
+                $scope.validationPassed = $scope.validationPassed && true;
+            }
+        })
+    }
 
 
 
 
 }])
-function showIfError(value) {
-    if ($(value).val().length <= 2) {
-        $(value).next().show();
-        $(value).addClass("error");
-    }
-    else {
-        $(value).next().hide();
-        $(value).removeClass("error");
-    }
-}
