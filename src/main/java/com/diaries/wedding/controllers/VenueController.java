@@ -51,11 +51,21 @@ public class VenueController {
 	
 	// For Update Venue
 	@RequestMapping(method=RequestMethod.POST,value="/update")
-	public Map<String, Object> Update(@RequestBody Venue venue){
+	public Map<String, Object> updateVenue(@RequestBody Venue venue){
 		Map<String, Object> response = new LinkedHashMap<String, Object>();
 	    response.put("message", "Venue updated successfully");
 	    response.put("venue", venueRepository.save(venue));
 	    return response;
+	}
+	
+	//For Delete Venue
+	@RequestMapping(value="/{id}",method=RequestMethod.DELETE)
+	public Map<String,Object> deleteVenue(@PathVariable("id")String id){
+		Map<String, Object> response = new LinkedHashMap<String, Object>();
+	    venueRepository.delete(id);
+	    response.put("message", "Venue Deleted Successfully");
+	    return response;
+	 
 	}
 	//Search based on location
 /*	public Venue[] searchLoc(String locname){
