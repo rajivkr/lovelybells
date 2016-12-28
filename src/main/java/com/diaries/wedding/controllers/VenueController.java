@@ -48,6 +48,15 @@ public class VenueController {
 		
 	    return ven;
 	}
+	
+	// For Update Venue
+	@RequestMapping(method=RequestMethod.POST,value="/update")
+	public Map<String, Object> Update(@RequestBody Venue venue){
+		Map<String, Object> response = new LinkedHashMap<String, Object>();
+	    response.put("message", "Venue updated successfully");
+	    response.put("venue", venueRepository.save(venue));
+	    return response;
+	}
 	//Search based on location
 /*	public Venue[] searchLoc(String locname){
 		//venueRepository.find()
