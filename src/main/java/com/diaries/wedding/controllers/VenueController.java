@@ -38,7 +38,7 @@ public class VenueController {
 	public Map<String, Object> createVenue(@RequestBody Venue venue){
 		
 		Map<String, Object> response = new LinkedHashMap<String, Object>();
-	    response.put("message", "Book created successfully");
+	    response.put("message", "Venue inserted successfully");
 	    response.put("venue", venueRepository.save(venue));
 	    return response;
 	}
