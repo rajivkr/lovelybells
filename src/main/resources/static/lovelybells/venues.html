@@ -1,0 +1,227 @@
+
+<section id="vnue" ng-controller="VenueController">
+		<div class="container">
+			<div class="row">
+
+                    <div class="col-md-3 filter-by-block md-margin-bottom-60">
+ 				<h2>FILTER</h2>
+ 					<div class="panel-group" id="accordion">
+ 						<div class="panel panel-default">
+ 							<div class="panel-heading">
+ 								<h2 class="panel-title">
+ 									<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+ 										Regions
+ 										<i class="fa fa-angle-down"></i>
+ 									</a>
+ 								</h2>
+ 							</div>
+ 							<div id="collapseOne" class="panel-collapse collapse in">
+ 								<div class="panel-body">
+ 									<ul class="list-unstyled checkbox-list ctgrs">
+ 										<li>
+ 											<label class="checkbox">
+ 												
+ 										
+ 												<a href="#">xxx</a> 											</label>
+ 										</li>
+ 										<li>
+ 											<label class="checkbox">
+ 												
+ 												<a href="#">xxx </a>											</label>
+ 										</li>
+                                        <li>
+ 											<label class="checkbox">
+ 												
+ 												<a href="#"> xxx</a>											</label>
+ 										</li>
+                                        <li>
+ 											<label class="checkbox">
+ 												
+ 												<a href="#">xxx</a></label>
+ 										</li>
+                                       
+                                        
+                                      
+ 									</ul>
+ 								</div>
+ 							</div>
+ 						</div>
+ 					</div><!--/end panel group-->
+
+ 					<div class="panel-group" id="accordion-v2">
+ 						<div class="panel panel-default">
+ 							<div class="panel-heading">
+ 								<h2 class="panel-title">
+ 									<a data-toggle="collapse" data-parent="#accordion-v2" href="#collapseTwo">
+ 										Budget
+ 										<i class="fa fa-angle-down"></i>
+ 									</a>
+ 								</h2>
+ 							</div>
+ 							<div id="collapseTwo" class="panel-collapse collapse in">
+ 								<div class="panel-body">
+ 									<ul class="list-unstyled checkbox-list ctgrs">
+ 										<li>
+ 											<label class="checkbox">
+ 												
+ 												xxx
+</label>
+ 										</li>
+                                        <li>
+ 											<label class="checkbox">
+ 												
+ 												xxx
+</label>
+ 										</li>
+                                        <li>
+ 											<label class="checkbox">
+ 												
+ 										xxx
+
+</label>
+ 										</li>
+                                        <li>
+ 											<label class="checkbox">
+ 												
+ 											xxxx
+</label>
+ 										</li>
+ 										
+                                         
+ 									</ul>
+ 								</div>
+ 							</div>
+ 						</div>
+ 					</div><!--/end panel group-->
+
+ 					<div class="panel-group" id="accordion-v3">
+ 						<div class="panel panel-default">
+ 							<div class="panel-heading">
+ 								<h2 class="panel-title">
+ 									<a data-toggle="collapse" data-parent="#accordion-v2" href="#collapseThree">
+ 										quest
+ 										<i class="fa fa-angle-down"></i>
+ 									</a>
+ 								</h2>
+ 							</div>
+ 							<div id="collapseThree" class="panel-collapse collapse in">
+ 								<div class="panel-body">
+ 									<ul class="list-unstyled checkbox-list ctgrs">
+ 										<li>
+ 											<label class="checkbox">
+ 												
+ 												xxx
+</label>
+ 										</li>
+                                        <li>
+ 											<label class="checkbox">
+ 												
+ 												xxx
+</label>
+ 										</li>
+                                        <li>
+ 											<label class="checkbox">
+ 												
+ 										xxx
+
+</label>
+ 										</li>
+                                        <li>
+ 											<label class="checkbox">
+ 												
+ 											xxxx
+</label>
+ 										</li>
+ 										
+                                         
+ 									</ul>
+ 								</div>
+ 							</div>
+ 						</div>
+ 					</div><!--/end panel group-->
+
+
+ 					<div class="panel-group" id="accordion-v4">
+ 						<div class="panel panel-default">
+ 							<div class="panel-heading">
+ 								<h2 class="panel-title">
+ 									<a data-toggle="collapse" data-parent="#accordion-v4" href="#collapseFour">
+ 										Services
+ 										<i class="fa fa-angle-down"></i>
+ 									</a>
+ 								</h2>
+ 							</div>
+ 							<div id="collapseFour" class="panel-collapse collapse in">
+ 								<ul class="list-unstyled checkbox-list ctgrs">
+ 										<li>
+ 											<label class="checkbox">
+ 												
+ 												Ceremony
+</label>
+ 										</li>
+                                        <li>
+ 											<label class="checkbox">
+ 												
+ 												Reception
+</label>
+ 										</li>
+                                       
+                                       
+ 										
+                                         
+ 									</ul>
+ 						</div>
+ 					</div><!--/end panel group-->
+
+ 					
+
+ 					</div>
+ 					
+ 				</div>
+						
+				
+				<div class="col-sm-9 locat padding-right">
+               
+                            <div class="col-md-12 margin-bottom" id="venueItem" ng-repeat="venue in venueList">
+					<div class="col-md-6 gals">
+                    <img src="images/gallery/a1.jpg">
+                    </div>	
+                    	<div class="col-md-6 dtls">
+                        <div class="col-md-3 pcs">
+                        <img src="images/gallery/s1.jpg"></div>
+                        <div class="col-md-9 desc">
+                         <h2>{{ venue.name}}</h2>
+    <h4>{{ venue.state}}, {{ venue.city}}</h4>
+     <p>Rs.{{venue.venueRent}}</p>
+         </div>
+<div class="row"></div>
+<div class="col-md-12 hight">
+     <h2>HIGHLIGHTS</h2>
+     <p ng-repeat="otherHiglight in venue.otherHighlights"> 
+     <span ng-class="otherHiglight.isAvailable =='1' ? 'fa fa-check color-green':'fa fa-times color-red'" aria-hidden="true"></span> 
+     {{otherHiglight.category}}</p>
+     
+     </div>
+    
+     </div>
+     </div>
+     
+     
+                    
+                    <div class="Page navigation page">
+  <ul class="pagination">
+    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+  </ul>
+</div>		
+					</div>
+                    
+                    </div>
+                    
+		</div>	
+		
+	</section>
+   
