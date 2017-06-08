@@ -1,6 +1,6 @@
 
-<section id="vnue" ng-controller="VenueController">
-		<div class="container">
+<section id="vnue" ng-controller="VenueController" >
+		<div class="container" ng-init="intializePage()">
 			<div class="row">
 
                     <div class="col-md-3 filter-by-block md-margin-bottom-60">
@@ -18,29 +18,18 @@
  							<div id="collapseOne" class="panel-collapse collapse in">
  								<div class="panel-body">
  									<ul class="list-unstyled checkbox-list ctgrs">
- 										<li>
+ 										<li ng-repeat="state in states">
  											<label class="checkbox">
  												
  										
- 												<a href="#">xxx</a> 											</label>
+ 												<a href="" ng-click="regionFilter(state.state)">{{state.state}}</a> 											</label>
  										</li>
- 										<li>
- 											<label class="checkbox">
- 												
- 												<a href="#">xxx </a>											</label>
- 										</li>
-                                        <li>
- 											<label class="checkbox">
- 												
- 												<a href="#"> xxx</a>											</label>
- 										</li>
-                                        <li>
- 											<label class="checkbox">
- 												
- 												<a href="#">xxx</a></label>
- 										</li>
+ 										
                                        
-                                        
+                                        <li><label class="checkbox">
+ 												
+ 										
+ 												<a href="" ng-click="regionFilter('')">All</a> </li>
                                       
  									</ul>
  								</div>
@@ -171,18 +160,24 @@
                                          
  									</ul>
  						</div>
+ 						</div>
+ 						</div>
  					</div><!--/end panel group-->
-
  					
 
- 					</div>
  					
- 				</div>
+ 					
+ 				
 						
-				
+				<select class ="ord" ng-model="order" >
+            <option value="-added">Recently Added</option>
+            <option value="venueRent">Price (low to high)</option>
+            <option value="-venueRent">Price (high to low)</option>
+            
+        </select>
 				<div class="col-sm-9 locat padding-right">
                
-                            <div class="col-md-12 margin-bottom" id="venueItem" ng-repeat="venue in venueList">
+                            <div class="col-md-12 margin-bottom" id="venueItem" ng-repeat="venue in venueList |filter:regionOnly |orderBy:order">
 					<div class="col-md-6 gals">
                     <img src="images/gallery/a1.jpg">
                     </div>	
@@ -200,6 +195,7 @@
      <p ng-repeat="otherHiglight in venue.otherHighlights"> 
      <span ng-class="otherHiglight.isAvailable =='1' ? 'fa fa-check color-green':'fa fa-times color-red'" aria-hidden="true"></span> 
      {{otherHiglight.category}}</p>
+     <button ng-click="setVenueID(venue.id)">view details</button>
      
      </div>
     
@@ -224,4 +220,20 @@
 		</div>	
 		
 	</section>
+	 <link rel="stylesheet" href="css/freshslider.min.css">
+	 
+   <script src="js/freshslider.min.js"></script>
+<script>
    
+    var s3 = $("#ranged-value").freshslider({
+        range: true,
+        step:1,
+        value:[4, 60],
+        onchange:function(low, high){
+            console.log(low, high);
+        }
+    });
+</script>
+
+      
+     

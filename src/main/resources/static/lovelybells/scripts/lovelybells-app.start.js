@@ -13,6 +13,15 @@ app.config(['$routeProvider',
          when('/ViewVenue', {
              templateUrl: 'ViewVenue.html',
              controller: 'VenueController'
+         }).
+         when('/VenueDetails', {
+             templateUrl: 'venueDetails.html',
+             controller: 'VenueDetailsController',
+             css: 'css/camera.css'
+         }).
+         when('/', {
+             templateUrl: 'index.html',
+             controller: 'indexController'
          })
         // otherwise({
         // redirectTo: '/Customers/AddNewCustomer'
