@@ -97,11 +97,12 @@ app.factory('VenueService', function ($http, $log, $q) {
 
             return deferred.promise;
         },
-        setSavedData: function (data) {
-            savedData = data;
+        setVenueId: function (venueId) {
+        	sessionStorage.venueId = venueId;
+        	 console.log(sessionStorage.venueId);
         },
-        getSavedData: function () {
-            return savedData;
+        getVenueId: function () {
+            return sessionStorage.venueId;
         }
     }
 });
