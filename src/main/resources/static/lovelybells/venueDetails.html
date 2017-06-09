@@ -1,142 +1,159 @@
-<div ng-controller="VenueDetailsController" >
-<section id="banner"  ng-init="intializePage()">
-<div class="container">
-<div class="col-md-12">
-          <div class="col-md-7 fluid_container">
-          <p><a href="#">HOME</a><i class="fa fa-angle-right ryt" aria-hidden="true"></i><span class="a1"><a href="#">VENUE</a><i class="fa fa-angle-right ryt" aria-hidden="true"></i></span><span class="a2">{{venue.name}}</span></p>
-          <div class="camera_wrap camera_azure_skin" id="camera_wrap_1">
-           
-        </div><!-- #camera_wrap_1 --> 
-           
-        <div class="camera_wrap camera_magenta_skin" id="camera_wrap_2">
-            <div data-thumb="images/slider/thumb/g1.jpg" data-src="images/slider/bg1.jpg">
-                <div class="camera_caption fadeFromBottom">
-                    Camera is a responsive/adaptive slideshow. <em>Try to resize the browser window</em>
-                </div>
-            </div>
-            <div data-thumb="images/slider/thumb/g1.jpg" data-src="images/slider/bg2.jpg">
-                <div class="camera_caption fadeFromBottom">
-                    It uses a light version of jQuery mobile, <em>navigate the slides by swiping with your fingers</em>
-                </div>
-            </div>
-            <div data-thumb="images/slider/thumb/g1.jpg" data-src="images/slider/bg3.jpg">
-                <div class="camera_caption fadeFromBottom">
-                    <em>It's completely free</em> (even if a donation is appreciated)
-                </div>
-            </div>
-            <div data-thumb="images/slider/thumb/g1.jpg" data-src="images/slider/bg1.jpg">
-                <div class="camera_caption fadeFromBottom">
-                    Camera slideshow provides many options <em>to customize your project</em> as more as possible
-                </div>
-            </div>
-            <div data-thumb="images/slider/thumb/g1.jpg" data-src="images/slider/bg2.jpg">
-                <div class="camera_caption fadeFromBottom">
-                    It supports captions, HTML elements and videos and <em>it's validated in HTML5</em> (<a href="http://validator.w3.org/check?uri=http%3A%2F%2Fwww.pixedelic.com%2Fplugins%2Fcamera%2F&amp;charset=%28detect+automatically%29&amp;doctype=Inline&amp;group=0&amp;user-agent=W3C_Validator%2F1.2" target="_blank">have a look</a>)
-                </div>
-            </div>
-            <div data-thumb="images/slider/thumb/g1.jpg" data-src="images/slider/bg1.jpg">
-                <div class="camera_caption fadeFromBottom">
-                    Different color skins and layouts available, <em>fullscreen ready too</em>
-                </div>
-            </div>
-        </div><!-- #camera_wrap_2 -->
-    </div><!-- .fluid_container -->
-    <div class="col-md-4 dtals">
-    <h2>VENUE DETAILS</h2>
-    <div class="detail">
-    <div class="col-md-6 dtl">
-    <h4>NAME:</h4>
-    <h4>LOCATION:</h4>
-    <h4>PRICE:</h4>
-    <h4>RATING:</h4>
-    <h4>OTHER HIGHLIGHTS:</h4></div>
-    <div class="col-md-6 dtl">
-    <h4>{{venue.name}}</h4>
-    <h4>{{venue.city}}</h4>
-    <h4>Rs.{{venue.venueRent}}</h4>
-    <h4>{{venue.overallRatings}}</h4>
-    <h4 ng-repeat="otherHiglight in venue.otherHighlights">
-    <span ng-class="otherHiglight.isAvailable =='1' ? 'fa fa-check color-green':'fa fa-times color-red'" aria-hidden="true"></span> 
-    {{otherHiglight.category}}
-    </h4>
-    </div>
-    </div>
-    </div>
-    </div></div>
-    </section>
-    <div class="row"></div>
-    <section id="tab">
-    <div class="container">
-    <div class="col-md-12">
-    <div class="col-md-7">
-    <div class="tab tab-horiz">
-			<ul class="tab-legend cnt">
-            <li class="active">Overview</li>
-				<li>Amenities</li>
-				<li>Discount</li>
-				
-			</ul>
-			<ul class="tab-content tabcnt">
-				<li>
-					<!--TAB CONTENT-->
-					<h4>Content</h4>
-				</li>
-				<li>
-					<!--TAB CONTENT-->
-					<h4>Content1</h4>
-				</li>
-				<li>
-					<!--TAB CONTENT-->
-					<h4>Content3</h4>
-				</li>
-				<li>
-					<!--TAB CONTENT-->
-					<h4>Content2</h4>
-				</li>
-			</ul></div>
+<div ng-controller="VenueDetailsController" ng-init="intializePage()">
+	<section id="banner">
+		<div class="container">
+			<div class="col-md-12">
+				<div class="col-md-7 fluid_container">
+					<p>
+						<a href="#">HOME</a><i class="fa fa-angle-right ryt"
+							aria-hidden="true"></i><span class="a1"><a href="#">VENUE</a><i
+							class="fa fa-angle-right ryt" aria-hidden="true"></i></span><span
+							class="a2">{{venue.name}}</span>
+					</p>
+					<div class="camera_wrap camera_azure_skin" id="camera_wrap_1">
+
+					</div>
+					<!-- #camera_wrap_1 -->
+
+					<div class="camera_wrap camera_magenta_skin" id="camera_wrap_2">
+						<div data-thumb="images/slider/thumb/g1.jpg"
+							data-src="images/slider/bg1.jpg">
+							<div class="camera_caption fadeFromBottom">
+								Camera is a responsive/adaptive slideshow. <em>Try to
+									resize the browser window</em>
+							</div>
+						</div>
+						<div data-thumb="images/slider/thumb/g1.jpg"
+							data-src="images/slider/bg2.jpg">
+							<div class="camera_caption fadeFromBottom">
+								It uses a light version of jQuery mobile, <em>navigate the
+									slides by swiping with your fingers</em>
+							</div>
+						</div>
+						<div data-thumb="images/slider/thumb/g1.jpg"
+							data-src="images/slider/bg3.jpg">
+							<div class="camera_caption fadeFromBottom">
+								<em>It's completely free</em> (even if a donation is
+								appreciated)
+							</div>
+						</div>
+						<div data-thumb="images/slider/thumb/g1.jpg"
+							data-src="images/slider/bg1.jpg">
+							<div class="camera_caption fadeFromBottom">
+								Camera slideshow provides many options <em>to customize
+									your project</em> as more as possible
+							</div>
+						</div>
+						<div data-thumb="images/slider/thumb/g1.jpg"
+							data-src="images/slider/bg2.jpg">
+							<div class="camera_caption fadeFromBottom">
+								It supports captions, HTML elements and videos and <em>it's
+									validated in HTML5</em> (<a
+									href="http://validator.w3.org/check?uri=http%3A%2F%2Fwww.pixedelic.com%2Fplugins%2Fcamera%2F&amp;charset=%28detect+automatically%29&amp;doctype=Inline&amp;group=0&amp;user-agent=W3C_Validator%2F1.2"
+									target="_blank">have a look</a>)
+							</div>
+						</div>
+						<div data-thumb="images/slider/thumb/g1.jpg"
+							data-src="images/slider/bg1.jpg">
+							<div class="camera_caption fadeFromBottom">
+								Different color skins and layouts available, <em>fullscreen
+									ready too</em>
+							</div>
+						</div>
+					</div>
+					<!-- #camera_wrap_2 -->
+				</div>
+				<!-- .fluid_container -->
+				<div class="col-md-4 dtals">
+					<h2>VENUE DETAILS</h2>
+					<div class="detail">
+						<div class="col-md-6 dtl">
+							<h4>NAME:</h4>
+							<h4>LOCATION:</h4>
+							<h4>PRICE:</h4>
+							<h4>RATING:</h4>
+							<h4>OTHER HIGHLIGHTS:</h4>
+						</div>
+						<div class="col-md-6 dtl">
+							<h4>{{venue.name}}</h4>
+							<h4>{{venue.city}}</h4>
+							<h4>Rs.{{venue.venueRent}}</h4>
+							<h4>{{venue.overallRatings}}</h4>
+							<h4 ng-repeat="otherHiglight in venue.otherHighlights">
+								<span
+									ng-class="otherHiglight.isAvailable =='1' ? 'fa fa-check color-green':'fa fa-times color-red'"
+									aria-hidden="true"></span> {{otherHiglight.category}}
+							</h4>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
-        <div class="col-md-4">
-        </div>
-        </div></div>
-</section>
+	</section>
+	<div class="row"></div>
+	<section id="tab">
+		<div class="container">
+			<div class="col-md-12">
+				<div class="col-md-7">
+					<div class="tab tab-horiz">
+						<ul class="tab-legend cnt">
+							<li class="active">Overview</li>
+							<li>Amenities</li>
+							<li>Discount</li>
+
+						</ul>
+						<ul class="tab-content tabcnt">
+							<li>
+								<!--TAB CONTENT-->
+								<h4>Content</h4>
+							</li>
+							<li>
+								<!--TAB CONTENT-->
+								<h4>Content1</h4>
+							</li>
+							<li>
+								<!--TAB CONTENT-->
+								<h4>Content3</h4>
+							</li>
+							<li>
+								<!--TAB CONTENT-->
+								<h4>Content2</h4>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-4"></div>
+			</div>
+		</div>
+	</section>
 
 
 </div>
 
 
 
-    
-<link href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" media="all" rel="stylesheet">
-    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" media="all" rel="stylesheet">
-    <link href="http://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet" type="text/css">
-    <link href="css/styles.css" media="all" rel="stylesheet">
-    <link type="text/css" href="css/jquery-gentleSelect.css" rel="stylesheet" />
-    <link type="text/css" href="css/font-awesome.css" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="css/tabModule.css" />
-    <link href="css/animate.min.css" rel="stylesheet">
-    <link rel='stylesheet' id='camera-css'  href="css/camera.css"> 
-    
-    
-     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-     <script type="text/javascript" src="js/jquery-gentleSelect.js"></script>
-    <script src="js/main.js"></script>
-    <script type='text/javascript' src="js/camera.min.js"></script>
-       <script type='text/javascript' src="js/jquery.easing.1.3.js"></script> 
-   <script type="text/javascript" src="js/tabModule.js"></script>
-    <script>
-		jQuery(function(){
-			
-			jQuery('#camera_wrap_1').camera({
-				thumbnails: true
-			});
 
-			jQuery('#camera_wrap_2').camera({
-				height: '400px',
-				loader: 'bar',
-				pagination: false,
-				thumbnails: true
-			});
-		});
-	</script>
-     
+<link
+	href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"
+	media="all" rel="stylesheet">
+<link
+	href="https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css"
+	media="all" rel="stylesheet">
+<link href="http://fonts.googleapis.com/css?family=Roboto+Condensed"
+	rel="stylesheet" type="text/css">
+<link href="css/styles.css" media="all" rel="stylesheet">
+<link type="text/css" href="css/jquery-gentleSelect.css"
+	rel="stylesheet" />
+<link type="text/css" href="css/font-awesome.css" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="css/tabModule.css" />
+<link href="css/animate.min.css" rel="stylesheet">
+<link rel='stylesheet' id='camera-css' href="css/camera.css">
+
+
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script
+	src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/jquery-gentleSelect.js"></script>
+<script src="js/main.js"></script>
+<script type='text/javascript' src="js/camera.min.js"></script>
+<script type="text/javascript" src="js/tabModule.js"></script>
+
