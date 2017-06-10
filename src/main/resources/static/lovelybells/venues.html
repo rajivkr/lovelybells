@@ -178,7 +178,7 @@
         
         <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Compare venues</button>
 
-  <!-- Modal -->
+  <!-- venue comparator start -->
   <div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog">
     
@@ -193,21 +193,21 @@
 		<tbody>
 		<tr>
 		<th scope="row">name</th>
-		<td ng-repeat="venueCom in venueCompare">  {{venueCom.name}}</td>
+		<td ng-repeat="venueCom in venueCompare|filter:regionOnly">  {{venueCom.name}}</td>
 		</tr>
 		<tr>
 		<th scope="row">price</th>
-		<td ng-repeat="venueCom in venueCompare">  {{venueCom.venueRent}}</td>
+		<td ng-repeat="venueCom in venueCompare|filter:regionOnly">  {{venueCom.venueRent}}</td>
 		</tr>
 		
 		<tr>
 		<th scope="row">city</th>
-		<td ng-repeat="venueCom in venueCompare">  {{venueCom.city}}</td>
+		<td ng-repeat="venueCom in venueCompare|filter:regionOnly">  {{venueCom.city}}</td>
 		</tr>
 		
 		<tr>
 		<th scope="row">state</th>
-		<td ng-repeat="venueCom in venueCompare">  {{venueCom.state}}</td>
+		<td ng-repeat="venueCom in venueCompare|filter:regionOnly">  {{venueCom.state}}</td>
 		</tr>
 		</tbody>
 		</table>
@@ -220,6 +220,7 @@
       
     </div>
   </div>
+   <!-- venue comparator end -->
 				<div class="col-sm-9 locat padding-right">
                
                             <div class="col-md-12 margin-bottom" id="venueItem" ng-repeat="venue in venueList |filter:regionOnly |orderBy:order">
