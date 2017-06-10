@@ -2,35 +2,20 @@
  * 
  */
 app.controller('VenueDetailsController', ['$scope', 'VenueService','$location', function ($scope, VenueService,$location) {
-	
 
+
+	$scope.venue1="nanda";
 	VenueService.getFullVenue(VenueService.getVenueId()).then(function (data) {
         $scope.venue= data;
-        $scope.intializePage = function(){
-        	
-        	$(document).ready(function() {
-        		 tabModule.init();
-                $('#example1').gentleSelect({ 
-                    columns: 3,
-                    itemWidth: 100,
-                    title: "Select a fruit",
-        	    hideOnMouseOut: true
-                });
-        		 $('#example3').gentleSelect({ 
-                    columns: 3,
-                    itemWidth: 100
-                });
-        		 
-              });
+       
         
+      console.log($scope.venue);
         
-        	
-        
-        };
-        
-      
-        
-    })
+    });
+	
+	
+	
+	
 	   
 	 
 }])
