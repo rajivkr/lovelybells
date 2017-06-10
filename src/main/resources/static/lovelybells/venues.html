@@ -175,6 +175,51 @@
             <option value="-venueRent">Price (high to low)</option>
             
         </select>
+        
+        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Compare venues</button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">venue comparator</h4>
+        </div>
+        <div class="modal-body">
+		<table border="1px">
+		<tbody>
+		<tr>
+		<th scope="row">name</th>
+		<td ng-repeat="venueCom in venueCompare">  {{venueCom.name}}</td>
+		</tr>
+		<tr>
+		<th scope="row">price</th>
+		<td ng-repeat="venueCom in venueCompare">  {{venueCom.venueRent}}</td>
+		</tr>
+		
+		<tr>
+		<th scope="row">city</th>
+		<td ng-repeat="venueCom in venueCompare">  {{venueCom.city}}</td>
+		</tr>
+		
+		<tr>
+		<th scope="row">state</th>
+		<td ng-repeat="venueCom in venueCompare">  {{venueCom.state}}</td>
+		</tr>
+		</tbody>
+		</table>
+          
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
 				<div class="col-sm-9 locat padding-right">
                
                             <div class="col-md-12 margin-bottom" id="venueItem" ng-repeat="venue in venueList |filter:regionOnly |orderBy:order">
@@ -185,7 +230,7 @@
                         <div class="col-md-3 pcs">
                         <img src="images/gallery/s1.jpg"></div>
                         <div class="col-md-9 desc">
-                         <h2>{{ venue.name}}</h2>
+                         <h2>{{ venue.name}} <input type="checkbox" ng-model="checkVal"  value="Bike" ng-click="checkValue(venue,checkVal)" ></h2>
     <h4>{{ venue.state}}, {{ venue.city}}</h4>
      <p>Rs.{{venue.venueRent}}</p>
          </div>
@@ -196,7 +241,7 @@
      <span ng-class="otherHiglight.isAvailable =='1' ? 'fa fa-check color-green':'fa fa-times color-red'" aria-hidden="true"></span> 
      {{otherHiglight.category}}</p>
      <button ng-click="setVenueID(venue.id)">view details</button>
-     
+      
      </div>
     
      </div>
@@ -234,6 +279,16 @@
         }
     });
 </script>
+
+ <style>
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+}
+</style>
 
       
      
