@@ -39,7 +39,7 @@ app.controller('VenueController', ['$scope', 'VenueService','$location',function
 			
 			}
 			
-			console.log($scope.venueCompare+" "+val)
+			
 		}
 	   
 		  

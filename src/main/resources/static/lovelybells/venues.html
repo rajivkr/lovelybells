@@ -176,7 +176,7 @@
             
         </select>
         
-        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Compare venues</button>
+        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" ng-disabled="venueCompare.length == 0">Compare venues</button>
 
   <!-- venue comparator start -->
   <div class="modal fade" id="myModal" role="dialog">
@@ -288,6 +288,17 @@ table, th, td {
 }
 th, td {
     padding: 5px;
+}
+
+th{
+    color: white;
+    background: #0cf;
+}
+
+.ord {
+    margin-bottom: 20px;
+    margin-top: 15px;
+    float: right;
 }
 </style>
 
