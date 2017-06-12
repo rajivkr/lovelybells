@@ -4,8 +4,10 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.diaries.wedding</groupId>
+	<artifactId>lovely-bells</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
+	<name>Lovely Bells App</name>
 	<description>Search interface for Lovelybells</description>
 
 	<parent>
@@ -25,8 +27,23 @@
 			<artifactId>spring-boot-starter-data-mongodb</artifactId>
 		</dependency>
 		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-all</artifactId>
+			<version>1.9.5</version>
+		</dependency>
+		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger2</artifactId>
+			<version>2.6.1</version>
+		</dependency>
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger-ui</artifactId>
+			<version>2.6.1</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -39,7 +56,7 @@
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-cloudfoundry-connector</artifactId>
-			<version>1.2.3.RELEASE</version><!--$NO-MVN-MAN-VER$-->
+			<version>1.2.3.RELEASE</version><!--$NO-MVN-MAN-VER$ -->
 		</dependency>
 
 		<dependency>
@@ -50,7 +67,7 @@
 	</dependencies>
 
 	<build>
-		<finalName>Search-Interface</finalName>
+		<finalName>lovelybells</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
@@ -58,8 +75,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
-
-	<name>Wedding Diaries</name>
-	<artifactId>search-interface</artifactId>
 </project>
