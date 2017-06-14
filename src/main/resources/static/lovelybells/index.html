@@ -158,40 +158,10 @@
                    
                 </div>
                 <div class="slider filtering scrollpoint sp-effect5" >
-                    <div class="one">
+                    <div class="one" ng-repeat="venue in venues" on-finish-render="ngRepeatFinished">
                        <img src="images/gallery/g1.jpg" />
-                       <h2>ITC Grand Cholla</h2>
+                       <h2>{{venue.name}}</h2>
                        <p>Person<span class="s1">Price</span></p>
-                    </div>
-                    <div class="two">
-                    <img src="images/gallery/g2.jpg" />
-                     <h2>ITC Grand Cholla</h2>
-                       <p>Person<span class="s1">Price</span></p>
-                    </div>
-                    <div class="three">
-                        <img src="images/gallery/g3.jpg" />
-                         <h2>ITC Grand Cholla</h2>
-                           <p>Person<span class="s1">Price</span></p>
-                    </div>
-                    <div class="one">
-                       <img src="images/gallery/g1.jpg" /> 
-                        <h2>ITC Grand Cholla</h2> 
-                          <p>Person<span class="s1">Price</span></p>                      
-                    </div>
-                    <div class="one">
-                        <img src="images/gallery/g2.jpg" /> 
-                         <h2>ITC Grand Cholla</h2> 
-                           <p>Person<span class="s1">Price</span></p>                      
-                    </div>
-                    <div class="two">
-                         <img src="images/gallery/g3.jpg" /> 
-                          <h2>ITC Grand Cholla</h2> 
-                            <p>Person<span class="s1">Price</span></p>                    
-                    </div>
-                    <div class="three">
-                         <img src="images/gallery/g1.jpg" />  
-                          <h2>ITC Grand Cholla</h2> 
-                            <p>Person<span class="s1">Price</span></p>                  
                     </div>
                 </div>
                 
