@@ -11,6 +11,7 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.runners.MockitoJUnitRunner;
 import org.springframework.data.mongodb.gridfs.GridFsTemplate;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.diaries.wedding.controllers.ImageController;
@@ -59,4 +60,11 @@ public class ImageControllerTest {
 		imgController.createOrUpdate(mpFile);
 		
 	}*/
+
+	@Test
+	public void getPassword() {
+		BCryptPasswordEncoder encode = new BCryptPasswordEncoder();
+		String encodedPass = encode.encode("test123");
+		System.out.println("password is " + encodedPass);
+	}
 }

@@ -15,7 +15,7 @@ import com.diaries.wedding.model.Photography;
 import com.diaries.wedding.repository.PhotographyRepository;
 
 @RestController
-@RequestMapping("/photography")
+@RequestMapping("/rest/photography")
 public class PhotographyController {
 
 	@Autowired

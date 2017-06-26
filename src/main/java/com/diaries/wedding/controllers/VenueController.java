@@ -15,7 +15,7 @@ import com.diaries.wedding.model.Venue;
 import com.diaries.wedding.repository.VenueRepository;
 
 @RestController
-@RequestMapping("/venue")
+@RequestMapping("/rest/venue")
 public class VenueController {
 
 	@Autowired

@@ -16,7 +16,7 @@ app.factory('VenueService', function ($http, $log, $q) {
             		"name":"a",
             		"numOfHalls":2
             		};*/
-            $http.post('/venue', venueViewModel, config)// replace it with the required URL
+            $http.post('/rest/venue', venueViewModel, config)// replace it with the required URL
         .success(function (data, status, headers, config) {
             deferred.resolve(data);
         })
@@ -40,7 +40,7 @@ app.factory('VenueService', function ($http, $log, $q) {
             		"name":"a",
             		"numOfHalls":2
             		};*/
-            $http.get('/venue', config)// replace it with the required URL
+            $http.get('/rest/venue', config)// replace it with the required URL
         .success(function (data, status, headers, config) {
             deferred.resolve(data);
         })
@@ -64,7 +64,7 @@ app.factory('VenueService', function ($http, $log, $q) {
             		"name":"a",
             		"numOfHalls":2
             		};*/
-            $http.get('/venue/'+id, config)// replace it with the required URL
+            $http.get('/rest/venue/'+id, config)// replace it with the required URL
         .success(function (data, status, headers, config) {
             deferred.resolve(data);
         })
