@@ -12,10 +12,24 @@ app.controller('VenueDetailsController', ['$scope', 'VenueService','$location', 
       console.log($scope.venue);
         
     });
+	$scope.intializePage = function(){
+		
+		tabModule.init();
+		
+		$(document).scrollTop(0);
+			
+			 
+			
+	}
 	
 	
-	
-	
+	$scope.locationValue="pooju";
+	$scope.locationChange=function(event)
+	{
+		
+		console.log(event.target.innerHTML);
+		$scope.locationValue=event.target.innerHTML;
+	}
 	   
 	 
 }])

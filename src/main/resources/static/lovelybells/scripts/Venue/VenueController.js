@@ -1,4 +1,4 @@
-app.controller('VenueController', ['$scope', 'VenueService','$location',function ($scope, VenueService,$location) {
+app.controller('VenueController', ['$scope', 'VenueService','$location','$timeout',function ($scope, VenueService,$location,$timeout) {
 	
 	$scope.venueList=[]; 
 	$scope.order="-added";
@@ -41,9 +41,33 @@ app.controller('VenueController', ['$scope', 'VenueService','$location',function
 			
 			
 		}
-	   
-		  
 		
+		
+		 var s3 = $("#ranged-value").freshslider({
+		        range: true,
+		        step:1,
+		        value:[0, 100],
+		       onchange:function(low, high){
+		    	   $scope.minValue=low;
+		    	   $scope.maxValue=high;
+		    	   $timeout(function() {
+		    		   $scope.minValue=low;
+			    	   $scope.maxValue=high;
+		    		 }, 200);
+		    	  console.log($scope.minValue+" "+$scope.maxValue);
+		    	   
+		           
+		        }
+		    });
+		 $scope.budgetFilter=function(venue)
+		 {
+			 console.log(venue.venueRent);	
+			 
+			 return true;
+			
+			 
+		 }
+		 
 }])
  
 

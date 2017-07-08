@@ -7,7 +7,6 @@
 .tab {
   width: 100%;
   margin: 20px 0;
-  padding: 0 10px;
   overflow: hidden; }
 
 .tab > .tab-legend, .tab > .tab-content, .tab-legend > li, .tab-content > li {
@@ -33,10 +32,7 @@
   
   
 
-.tab-content.tabcnt
-{
-padding-left:20%;
-}
+
 
 .tab .tab-content {
   width: 100%;

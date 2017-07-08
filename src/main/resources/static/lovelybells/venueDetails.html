@@ -1,85 +1,118 @@
 <div ng-controller="VenueDetailsController"  ng-init="intializePage()">
-<section id="banner" >
+
+<section id="banner">
 <div class="container">
 <div class="col-md-12">
-          <div class="col-md-7 fluid_container">
+          <div class="col-md-8 fluid_container">
           <p><a href="#">HOME</a><i class="fa fa-angle-right ryt" aria-hidden="true"></i><span class="a1"><a href="#">VENUE</a><i class="fa fa-angle-right ryt" aria-hidden="true"></i></span><span class="a2">{{venue.name}}</span></p>
-          <div class="camera_wrap camera_azure_skin" id="camera_wrap_1">
-           
-        </div><!-- #camera_wrap_1 --> 
-           
-        <div class="camera_wrap camera_magenta_skin" id="camera_wrap_2">
-            <div data-thumb="images/slider/thumb/g1.jpg" data-src="images/slider/bg1.jpg">
-                <div class="camera_caption fadeFromBottom">
-                    Camera is a responsive/adaptive slideshow. <em>Try to resize the browser window</em> 
-                </div>
-            </div>
-            <div data-thumb="images/slider/thumb/g1.jpg" data-src="images/slider/bg2.jpg">
-                <div class="camera_caption fadeFromBottom">
-                    It uses a light version of jQuery mobile, <em>navigate the slides by swiping with your fingers</em>
-                </div>
-            </div>
-            <div data-thumb="images/slider/thumb/g1.jpg" data-src="images/slider/bg3.jpg">
-                <div class="camera_caption fadeFromBottom">
-                    <em>It's completely free</em> (even if a donation is appreciated)
-                </div>
-            </div>
-            <div data-thumb="images/slider/thumb/g1.jpg" data-src="images/slider/bg1.jpg">
-                <div class="camera_caption fadeFromBottom">
-                    Camera slideshow provides many options <em>to customize your project</em> as more as possible
-                </div>
-            </div>
-            <div data-thumb="images/slider/thumb/g1.jpg" data-src="images/slider/bg2.jpg">
-                <div class="camera_caption fadeFromBottom">
-                    It supports captions, HTML elements and videos and <em>it's validated in HTML5</em> (<a href="http://validator.w3.org/check?uri=http%3A%2F%2Fwww.pixedelic.com%2Fplugins%2Fcamera%2F&amp;charset=%28detect+automatically%29&amp;doctype=Inline&amp;group=0&amp;user-agent=W3C_Validator%2F1.2" target="_blank">have a look</a>)
-                </div>
-            </div>
-            <div data-thumb="images/slider/thumb/g1.jpg" data-src="images/slider/bg1.jpg">
-                <div class="camera_caption fadeFromBottom">
-                    Different color skins and layouts available, <em>fullscreen ready too</em>
-                </div>
-            </div>
-        </div><!-- #camera_wrap_2 -->
+          <div class="description">
+<h2 class="headng">About {{venue.name}}</h2>
+<p class="parag">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+</div>
+<ul class="bxslider">
+  <li><img src="images/slider/bg1.jpg" /></li>
+  <li><img src="images/slider/bg2.jpg" /></li>
+  <li><img src="images/slider/bg3.jpg" /></li>
+  <li><img src="images/slider/bg1.jpg" /></li>
+  <li><img src="images/slider/bg2.jpg" /></li>
+  <li><img src="images/slider/bg3.jpg" /></li>
+  <li><img src="images/slider/bg1.jpg" /></li>
+  <li><img src="images/slider/bg2.jpg" /></li>
+  <li><img src="images/slider/bg3.jpg" /></li>
+</ul>
+<div class="bx-controls bx-has-controls-direction">
+<div class="bx-controls-direction">
+<a class="bx-prev" href=""><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+<a class="bx-next" href=""><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+</div>
+</div>
+
+
+
+
+
     </div><!-- .fluid_container -->
+	
+	
+	
     <div class="col-md-4 dtals">
-    <h2>VENUE DETAILS </h2>
-    <div class="detail">
+    <h2>VENUE DETAILS</h2>
+	<div class="detail">
+	<div class="col-md-12 detl">
     <div class="col-md-6 dtl">
     <h4>NAME:</h4>
     <h4>LOCATION:</h4>
     <h4>PRICE:</h4>
     <h4>RATING:</h4>
-    <h4>OTHER HIGHLIGHTS:</h4></div>
+    </div>
     <div class="col-md-6 dtl">
     <h4>{{venue.name}}</h4>
     <h4>{{venue.city}}</h4>
-    <h4>Rs.{{venue.venueRent}}</h4>
-    <h4>{{venue.overallRatings}}</h4>
-    <h4 ng-repeat="otherHiglight in venue.otherHighlights">
-    <span ng-class="otherHiglight.isAvailable =='1' ? 'fa fa-check color-green':'fa fa-times color-red'" aria-hidden="true"></span> 
-    {{otherHiglight.category}}
-    </h4>
+    <h4>{{venue.venueRent}}</h4>
+    <h4>4star</h4>
     </div>
-    </div>
+	<div class="row"></div>
+	 <h4 class="imp">OTHER HIGHLIGHTS</h4>
+	<ul class="highlight">
+	<li ng-repeat="otherHiglight in venue.otherHighlights" class="highlight">
+	<span ng-class="otherHiglight.isAvailable =='1' ? 'tck fa fa-check':'crs fa fa-times'" aria-hidden="true">
+	</span> 
+     {{otherHiglight.category}}</li>
+	</ul>
+	</div>
+	</div>
     </div>
     </div></div>
+	<div id="bx-pager">
+	
+  <a data-slide-index="0" href=""><img src="images/gallery/v1.jpg" /></a>
+  <a data-slide-index="1" href=""><img src="images/gallery/v1.jpg" /></a>
+  <a data-slide-index="2" href=""><img src="images/gallery/v1.jpg" /></a>
+  <a data-slide-index="3" href=""><img src="images/gallery/v1.jpg" /></a>
+  <a data-slide-index="4" href=""><img src="images/gallery/v1.jpg" /></a>
+  
+</div>
+
+    </div>
     </section>
     <div class="row"></div>
-    <section id="tab">
+    <section id="tab" ng-init="intializePage()">
     <div class="container">
     <div class="col-md-12">
-    <div class="col-md-7">
+    <div class="col-md-8">
     <div class="tab tab-horiz">
 			<ul class="tab-legend cnt">
             <li class="active">Overview</li>
-				<li>Amenities</li>
-				<li>Discount</li>
+				<li>Contact</li>
+				<li>Price / Menu</li>
+				<li>Reviews / Rating</li>
 				
 			</ul>
 			<ul class="tab-content tabcnt">
 				<li>
 					<!--TAB CONTENT-->
-					<h4>Content</h4>
+					<div class="col-md-12">
+					<div class="col-md-4 listing">
+					<h4>Price Per Plate</h4>
+					 <p><span class="veg"><i class="fa fa-circle" aria-hidden="true"></i>
+</span>VEG <span class="rupee pull-right">Rs. 1,000/-</span><br>
+					 <span class="nonveg"><i class="fa fa-circle" aria-hidden="true"></i>
+</span>NON - VEG <span class="rupee pull-right">Rs. 1,200/-</span><p>
+					</div>
+					<div class="col-md-4 listing">
+					<h4>Lodging</h4>
+					<p class="price">Rooms Available</p>
+                    <p class="numbr">No. of Rooms:<span class="room">50</span><br>
+					Per Room Price:<span class="room">Rs.12,000 - 13,000</span><p>
+					</div>
+					<div class="col-md-4 listing">
+					<h4>Highlights</h4>
+					<p ng-repeat="otherHiglight in venue.otherHighlights" class="highlight">
+					<span ng-class="otherHiglight.isAvailable =='1' ? 'tck fa fa-check':'crs fa fa-times'" aria-hidden="true"></span> 
+     {{otherHiglight.category}}
+					<p>
+					</div>
+					</div>
 				</li>
 				<li>
 					<!--TAB CONTENT-->
@@ -87,19 +120,137 @@
 				</li>
 				<li>
 					<!--TAB CONTENT-->
-					<h4>Content3</h4>
+					<div class="col-md-12">
+					<div class="col-md-6 vegie">
+					<h2>VEG</h2>
+					<table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Menu</th>
+        <th>Varieties</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Soup</td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>Starters</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>Curry</td>
+        <td>5</td>
+      </tr>
+    </tbody>
+  </table>
+					</div>
+					<div class="col-md-6 Nonvegie">
+					<h2>Non - VEG</h2>
+					<table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>MENU</th>
+        <th>VARITIES</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Soup</td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>Starters</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>Curry</td>
+        <td>5</td>
+      </tr>
+    </tbody>
+  </table>
+					</div>
+					</div>
 				</li>
 				<li>
 					<!--TAB CONTENT-->
-					<h4>Content2</h4>
-				</li>
+					<div class="col-md-12">
+					<div class="col-md-4 listing">
+					<h4 class="rates">Rating Summary</h4>
+					<p>Cleanliness<span class="star pull-right"><i class="fa fa-star" aria-hidden="true"></i>
+ <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i></span><br>				
+ Event Decoration<span class="star pull-right"><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
+ <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i></span><br>				
+ Food Quality<span class="star pull-right"><i class="fa fa-star" aria-hidden="true"></i>
+ <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i></span><br>				
+ Location<span class="star pull-right"><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
+ <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i></span><br>	
+Parking<span class="star pull-right"><i class="fa fa-star" aria-hidden="true"></i>
+ <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i></span><br>				
+Services<span class="star pull-right"><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
+ <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i></span></p>	
+</div> 
+</div>
+                </li>
+				
 			</ul></div>
 		</div>
         <div class="col-md-4">
         </div>
         </div></div>
-</section>
+        <div class="modal fade" id="loc" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content content">
+	  
+	   <div class="modal-body">
+	   
+      
 
+  
+  
+<table>
+<thead>
+<tr class="hdr">
+<th ng-click="locationChange($event)" data-dismiss="modal">Chennai</th>
+<th ng-click="locationChange($event)" data-dismiss="modal">Coimbatore</th>
+<th ng-click="locationChange($event)" data-dismiss="modal">Banglore</th>
+</tr>
+</thead>
+<tbody>
+<tr class="place">
+<td ng-click="locationChange($event)" data-dismiss="modal">Virgambakkam</td>
+<td ng-click="locationChange($event)" data-dismiss="modal">ondipudur</td>
+<td ng-click="locationChange($event)" data-dismiss="modal">Koramangala</td>
+</tr>
+<tr class="place">
+<td ng-click="locationChange($event)" data-dismiss="modal">Vadapalani</td>
+<td ng-click="locationChange($event)" data-dismiss="modal">Ramnathapuram</td>
+<td ng-click="locationChange($event)" data-dismiss="modal">M.K Gandhi nagar</td>
+</tr>
+<tr class="place">
+<td ng-click="locationChange($event)" data-dismiss="modal">Mount Road</td>
+<td ng-click="locationChange($event)" data-dismiss="modal">Peelamedu</td>
+<td ng-click="locationChange($event)" data-dismiss="modal">Indira nagar</td>
+</tr>
+</tbody>
+</table>
+
+ 
+  
+
+
+        </div>
+        
+         
+        
+      </div>
+      
+    </div>
+  </div>
+</section>
 
 </div>
 
@@ -116,7 +267,7 @@
     <link href="css/animate.min.css" rel="stylesheet">
     <link rel='stylesheet' id='camera-css'  href="css/camera.css"> 
     
-    
+    <script type="text/javascript" src="js/jquery.bxslider.min.js"></script>
      <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
      <script type="text/javascript" src="js/jquery-gentleSelect.js"></script>
@@ -124,25 +275,14 @@
     <script type='text/javascript' src="js/camera.min.js"></script>
        <script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script> 
    <script type="text/javascript" src="js/tabModule.js"></script>
-    
-     <script>
-     
-setTimeout(function(){
-	
-		 
-		 jQuery('#camera_wrap_1').camera({
-				thumbnails: true
-			});
-
-		 jQuery('#camera_wrap_2').camera({
-				height: '400px',
-				loader: 'bar',
-				pagination: false,
-				thumbnails: true
-			});
-			
-			
-  	
-	}, 2);
-     
-     </script>
+    <script type="text/javascript" src="js/jquery.bxslider.min.js"></script>
+      <script>
+ $('.bxslider').bxSlider({
+  pagerCustom: '#bx-pager'
+});
+</script>
+ <script type="text/javascript">
+		$(document).ready(function(){
+			 tabModule.init();
+		});
+	</script>

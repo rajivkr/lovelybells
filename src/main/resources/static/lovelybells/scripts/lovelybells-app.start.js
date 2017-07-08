@@ -1,6 +1,6 @@
 var app = angular.module('bells', ['ngRoute']);
-app.config(['$routeProvider',
-    function ($routeProvider) {
+app.config(['$routeProvider','$locationProvider',
+    function ($routeProvider,$locationProvider) {
         $routeProvider.
             when('/Venue', {
                 templateUrl: 'Venue.html',
@@ -26,7 +26,7 @@ app.config(['$routeProvider',
         // otherwise({
         // redirectTo: '/Customers/AddNewCustomer'
         //})
-        ;
+         $locationProvider.html5Mode(false);
     }]);
 app.directive('onFinishRender', function ($timeout) {
     return {
@@ -35,6 +35,19 @@ app.directive('onFinishRender', function ($timeout) {
             if (scope.$last === true) {
                 $timeout(function () {
                     scope.$emit(attr.onFinishRender);
+                    appMaster.smoothScroll();
+
+                    appMaster.reviewsCarousel();
+
+                    appMaster.screensCarousel();
+
+                    appMaster.animateScript();
+
+                    appMaster.revSlider();
+
+                    appMaster.scrollMenu();
+
+                    appMaster.placeHold();
                 },500);
             }
         }
