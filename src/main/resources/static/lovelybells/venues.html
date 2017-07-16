@@ -221,7 +221,7 @@
    <!-- venue comparator end -->
 				
                
-                            <div class="col-md-12 margin-bottom" id="venueItem" ng-repeat="venue in venueList |filter:regionOnly |orderBy:order">
+                            <div class="col-md-12 margin-bottom" id="venueItem" ng-repeat="venue in venueList  |filter:regionOnly |orderBy:order track by $index">
 					<div class="col-md-6 gals">
                    <a href="" ng-click="setVenueID(venue.id)"> <img src="images/gallery/a1.jpg" style="height:231px;width:377px"></a>
                     </div>	
