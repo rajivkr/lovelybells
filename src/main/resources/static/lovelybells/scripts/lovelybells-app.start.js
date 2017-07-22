@@ -19,7 +19,7 @@ app.config(['$routeProvider','$locationProvider',
              templateUrl: 'index.html',
          })
         // otherwise({
-        // redirectTo: '/Customers/AddNewCustomer'
+        // redirectTo: '/Custome////rs/AddNewCustomer'
         //})
          $locationProvider.html5Mode(false);
     }]);
