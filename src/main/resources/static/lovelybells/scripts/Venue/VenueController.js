@@ -2,12 +2,19 @@ app.controller('VenueController', ['$scope', 'VenueService','$location','$timeou
 	
 	$scope.venueList=[]; 
 	$scope.order="-added";
-	console.log($scope.order);
+	$scope.start=0;
+	$scope.end=3;
 	$scope.regionFilter=function(region){
 		$scope.regionOnly=region;
 	}; 
 	VenueService.getVenues().then(function (data) {
-	        $scope.venueList = data;
+	        $scope.venueList = data;	      
+	        $scope.pageArray=new Array(Math.ceil($scope.venueList.length/3));
+			$scope.pageValue=function(num){
+			 $scope.end=num*3;
+			 $scope.start=$scope.end-3;
+			
+			}
 	        $scope.states = _.uniqBy($scope.venueList, function (venue) {
 	    	    return venue.state;
 	        });
@@ -15,7 +22,7 @@ app.controller('VenueController', ['$scope', 'VenueService','$location','$timeou
 	    /*$scope.states = _.uniqBy($scope.venueList, function (venue) {
 	    return venue.state;
         });*/
-	    
+	   
 		$scope.setVenueID=function(venueId)
 		{
 		
@@ -43,30 +50,16 @@ app.controller('VenueController', ['$scope', 'VenueService','$location','$timeou
 		}
 		
 		
-		 var s3 = $("#ranged-value").freshslider({
-		        range: true,
-		        step:1,
-		        value:[0, 100],
-		       onchange:function(low, high){
-		    	   $scope.minValue=low;
-		    	   $scope.maxValue=high;
-		    	   $timeout(function() {
-		    		   $scope.minValue=low;
-			    	   $scope.maxValue=high;
-		    		 }, 200);
-		    	  console.log($scope.minValue+" "+$scope.maxValue);
-		    	   
-		           
-		        }
-		    });
+		
 		 $scope.budgetFilter=function(venue)
 		 {
-			 console.log(venue.venueRent);	
+			 
 			 
 			 return true;
 			
 			 
 		 }
+		
 		 
 }])
  

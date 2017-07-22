@@ -119,10 +119,7 @@
               <!--/.item-->
           </div><!--/.carousel-inner-->
         </div><!--/.carousel-->
-        <a class="prev hidden-xs" href="#main-slider" data-slide="prev">
-            <i class="fa fa-chevron-left"></i>        </a>
-        <a class="next hidden-xs" href="#main-slider" data-slide="next">
-            <i class="fa fa-chevron-right"></i>        </a>   
+        
              </section>
         <!--/#main-slider-->
   <section id="sec3">
@@ -138,31 +135,31 @@
    <h2>Most Popular Vendors</h2>
    <div class="row">
      <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 galry">
-         <img src="images/venue/v1.png"/>
+         <img src="images/venue/v5.png"/>
          <p>Caterer</p>
      </div>
      <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 galry">
-          <img src="images/venue/v1.png"/> 
+          <img src="images/venue/v5.png"/> 
           <p>Photography</p>
      </div>
       <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 galry">
-           <img src="images/venue/v1.png"/> 
+           <img src="images/venue/v5.png"/> 
            <p>Invitation</p>
       </div>
 
       <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 galry">
-            <img src="images/venue/v1.png"/> 
+            <img src="images/venue/v5.png"/> 
             <p>Venue</p>
       </div>
 
       <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 galry">
-             <img src="images/venue/v1.png"/> 
+             <img src="images/venue/v5.png"/> 
              <p>Make Up</p>
       </div>
 
 
       <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 galry">
-          <img src="images/venue/v1.png"/> 
+          <img src="images/venue/v5.png"/> 
           <p>Decorator</p>
       </div>
    </div>
@@ -174,10 +171,8 @@
 <h2>Most Popular Venues<span class="pull-right venu"><a href="" ng-click=setVF('all')>All</a>
 <a href="" ng-click=setVF('best')>best</a></span></h2>
 
-<div class="col-md-2 titl">
-<h1>VIEW ALL</h1>
-</div>
-<div class="col-md-10">
+
+<div class="col-md-10 mixed">
 
 <div id="mixedSlider">
                     <div class="MS-content">
@@ -188,9 +183,10 @@
                             </div>
 							<div class="imagetitle">
 							 <h2 class="blogTitle">{{venue.vname}}</h2>
-                            <p>{{venue.varea}}, {{venue.vcity}}<span ng-repeat="i in stars(venue.rating) track by $index"" class="galrtxt">
+                            <p>{{venue.varea}}, {{venue.vcity}}
+							<span class="galrtxt">
 						
-						<i class="fa fa-star pull-right icn" aria-hidden="true"></i></span>
+						{{venue.rating}}<i class="fa fa-star icn" aria-hidden="true"></i></span>
 						</p></div>
                             
                         </div>
@@ -198,11 +194,15 @@
                        
                     </div>
                     <div class="MS-controls">
-                        <button class="MS-left"><i class="fa fa-angle-left" aria-hidden="true"></i></button>
-                        <button class="MS-right"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
+                        <button class="MS-left"><i class="fa fa-angle-left arr" aria-hidden="true"></i></button>
+                        <button class="MS-right"><i class="fa fa-angle-right arr" aria-hidden="true"></i></button>
                     </div>
                 </div>
 </div>
+<div class="col-md-2 titl">
+<img src="images/gallery/view.jpg">
+</div>
+
 
 
 </div>
