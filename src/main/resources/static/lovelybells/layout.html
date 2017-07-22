@@ -27,58 +27,114 @@
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
   </head>
   <body>
-    <nav>
-      <div class="container">
-        <div class="nav-top clearfix">
-          <div class="logo">
-            <h1>LOGO</h1>
-          </div>
-        
-          <div class="log">
-          <a class="location" data-toggle="modal" data-target="#loc" >{{locationValue}}</a>
-            <!-- Modal -->
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">Start Bootstrap</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a class="page-scroll" href="#about">HOME</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#services">VENUE</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#portfolio">PHOTOGRAPHER</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">CATERERS</a>
+                    </li>
+                     <li>
+                        <a class="page-scroll" href="#contact">OTHER VENDORS</a>
+                    </li>
+                     <li>
+                        <a class="page-scroll" href="#contact">PARTNER WITH US</a>
+                    </li>
+                </ul>
+                <span class="cntc">
+            <ul class="login">
+            <li><i class="fa fa-phone phn" aria-hidden="true"></i>+ 91 9940 441820</li>
+            <li><a class="location" data-toggle="modal" data-target="#myModal" >{{locationValue}}</a>
+   
+     <!-- Trigger the modal with a button -->
+ 
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content content">
+	  
+	   <div class="modal-body">
+	   
+      
+
   
-            <span class="t1"><i class="fa fa-mobile mb" aria-hidden="true"></i>
- +91 9940441820<span class="t2"><i class="fa fa-map-marker" aria-hidden="true"></i></span><span class="t3"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span></span></div>
-          <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse" type="button"><span class="sr-only">Toggle navigation</span><i class="fa fa-bars"></i></button>
+  
+<table>
+<thead>
+<tr class="hdr">
+<th ng-click="locationChange($event)" data-dismiss="modal">Chennai</th>
+<th ng-click="locationChange($event)" data-dismiss="modal">Coimbatore</th>
+<th ng-click="locationChange($event)" data-dismiss="modal">Banglore</th>
+</tr>
+</thead>
+<tbody>
+<tr class="place">
+<td ng-click="locationChange($event)" data-dismiss="modal">Virgambakkam</td>
+<td ng-click="locationChange($event)" data-dismiss="modal">ondipudur</td>
+<td ng-click="locationChange($event)" data-dismiss="modal">Koramangala</td>
+</tr>
+<tr class="place">
+<td ng-click="locationChange($event)" data-dismiss="modal">Vadapalani</td>
+<td ng-click="locationChange($event)" data-dismiss="modal">Ramnathapuram</td>
+<td ng-click="locationChange($event)" data-dismiss="modal">M.K Gandhi nagar</td>
+</tr>
+<tr class="place">
+<td ng-click="locationChange($event)" data-dismiss="modal">Mount Road</td>
+<td ng-click="locationChange($event)" data-dismiss="modal">Peelamedu</td>
+<td ng-click="locationChange($event)" data-dismiss="modal">Indira nagar</td>
+</tr>
+</tbody>
+</table>
+
+ 
+  
+
+
         </div>
+        
+         
+        
       </div>
       
+    </div>
+  </div>
 
-      <div class="main-nav navbar-collapse collapse">
-        <div class="container">
-          <div class="minilogo">
-            <h1>
-              Company
-            </h1>
-          </div>
-          <ul class="nav nav-justified">
-            <li>
-              <a href="#">HOME</a>
-            </li>
-            <li>
-              <a class="active" href="/lovelybells/layout.html#VenueList">VENUE</a>
-            </li>
-            <li>
-              <a href="#">PHOTOGRAPHERS</a>
-            </li>
-            <li>
-              <a href="#">CATERERS</a>
-            </li>
-               <li>
-              <a href="#">OTHER VENDORS</a>
-            </li>
-
-            <li>
-              <a href="#">PARTNER WITH US</a>
-            </li>
-           
-          </ul>
-        </div>
-      </div>
-    </nav>
       
-                           
+      
+</li>
+            <li><a href="sign">SignIn</a></li>
+            </ul>
+            </span>
+            </div>
+            <!-- /.navbar-collapse -->
+            
+        </div>
+        <!-- /.container-fluid -->
+    </nav>                           
     
 
 <div  ng-view></div>
