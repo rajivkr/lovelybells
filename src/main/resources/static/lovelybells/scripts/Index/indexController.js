@@ -60,4 +60,15 @@ var venues1=[
 	{
 		$scope.vFilter=fil;
 	};
+	
+	$scope.locationValue="pooju";
+	$scope.locationChange=function(event)
+	{
+		console.log("nanda");
+		console.log(event.target.innerHTML);
+		$scope.locationValue=event.target.innerHTML;
+	}
+						 
+					 
+	
 }])
