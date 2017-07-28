@@ -199,7 +199,7 @@ top: 41% !important;
 }
 
 #main-slider .carousel .slide-margin{
-  margin-top: 140px;
+  margin-top: 130px;
 }
 
 #main-slider .carousel h2 {
@@ -231,7 +231,7 @@ top: 41% !important;
   position: absolute;
   width: 100%;
   display: block !important;
-  height: 730px;
+  height: 594px;
   -webkit-transition: opacity ease-in-out 500ms;
   -moz-transition: opacity ease-in-out 500ms;
   -o-transition: opacity ease-in-out 500ms;
@@ -358,12 +358,8 @@ top: 41% !important;
 
 
 #sec3, #sec5, #sec4, #sec6, #sec7, #sec8, #sec9, #tab, #footr, #screens{
-	 padding-bottom: 30px;
-    padding-top: 30px; 
-}
-#sec3
-{
-	box-shadow: 0 0 10px 0 #ababab inset, 5px 5px 5px 1px #dddddd;
+	 padding-bottom: 60px;
+    padding-top: 50px; 
 }
 .abt > h2 {
     text-align: center;
@@ -1875,8 +1871,8 @@ text-decoration:none;
 /*sec3*/
 #sec3
 {
-	box-shadow: 0 0 10px 0 #b2b2b2 inset, 5px 5px 5px 1px #ffffff;
 	background:#fff;
+	border-bottom:1px solid #ddd;
 }
 .abt > h2 {
     text-align: center;
@@ -1922,7 +1918,12 @@ font-weight:bold;
 /*sec10*/
 #sec10
 {
-	background:#efefef none repeat scroll 0 0 !important;
+	background: #c52d2f none repeat scroll 0 0 !important;
+	padding-bottom: 60px;
+    padding-top: 50px;
+}
+#sec10 h2 {
+    color: #fff !important;
 }
 .abt h2, #sec10 h2
 {
@@ -1934,10 +1935,15 @@ font-weight:bold;
 .planning
 {
 	padding-top:20px;
-	padding-bottom::20px;
+	padding-bottom:20px;
 }
 .planning p {
-    font-size: 24px;
+   font-size: 18px;
+    color: #fff;
+}
+.vendor > img {
+    height: 100px;
+    width: 100px;
 }
 /*sec10*/
 /*footer*/
@@ -2158,7 +2164,7 @@ letter-spacing: 1px;
 .login > li {
     display: inline;
     list-style: outside none none;
-    padding-left: 15px;
+    padding-left: 7px;
 }
 .login {
     padding-top: 15px;
@@ -2260,8 +2266,11 @@ margin-top:10px;
 	
 	h2 {
     font-size: 14px;
-    padding-bottom: 27px;
+   padding-bottom: 16px;
     
+}
+.titl > img {
+    height: 146px;
 }
 	
 	#main-slider .carousel .slide-margin {
@@ -2302,10 +2311,10 @@ select.form-control {
 	font-size: 10px;
 }
 .nav>li>a {
-    padding: 10px 5px;
+    padding: 10px 4px;
 }
 .nav.navbar-nav {
-    padding-left: 10px;
+    padding-left: 5px;
     padding-top: 5px;
 } 
 .navbar-brand {
@@ -2394,8 +2403,8 @@ select.form-control {
 }
 
 #sec3, #sec5, #sec4, #sec6, #sec7, #sec8, #sec9, #tab, #footr, #screens {
-    padding-bottom: 10px;
-    padding-top: 10px;
+    padding-bottom: 30px;
+    padding-top: 25px;
 }
 .galry img {
     width: 46px;
@@ -2434,6 +2443,68 @@ h2.blogTitle.ng-binding {
     margin: 2px 5px 0 -5px;
     text-indent: 10px;
 }
+
+#mixedSlider .MS-content .item .imgTitle img {
+    height: auto;
+    width: 100%;
+}#mixedSlider .MS-controls button {  
+    top: 45px;
+	font-size: 24px;
+    }
+	.arr {
+    padding: 0px 8px;
+}
+
+#mixedSlider .MS-controls .MS-left {
+    left: -33px;
+}
+
+
+.titl {
+    padding-left: 5px;
+    margin-left: -9px;
+}
+
+#mixedSlider .MS-controls .MS-right {
+    right: -150px;
+}
+
+p {
+    margin-bottom: 8px;
+}
+
+
+.planning p {
+    font-size: 13px;
+}
+
+.planning img {
+    width: 60px;
+    height:60px;
+}
+
+.planning {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.widget > p, .widget li {
+    font-size: 12px !important;
+    letter-spacing: 1px;
+}
+.social {
+    font-size: 14px !important;
+    margin-top: 3px;
+}
+
+#sec10 {	
+    padding-bottom: 30px;
+    padding-top: 25px;
+}
+
+.location {
+    margin: 20px;
+}
 }
 
 
@@ -2444,6 +2515,67 @@ h2.blogTitle.ng-binding {
     background: #c52d2f none repeat scroll 0 0;
 }
 
+nav {
+    height: 60px;
+}
 
+.nav.navbar-nav {
+    padding-left: 19px;
+}
+
+.login {
+   visibility: hidden;
+}
+
+.finderform .form-group, .finder-form-transparent .form-group {
+    margin-bottom: 2px;
+}
+
+select.form-control {
+    font-size: 9px;
+    margin-bottom: 2px;
+}
+
+#sec3, #sec5, #sec4, #sec6, #sec7, #sec8, #sec9, #tab, #footr, #screens {
+    padding-bottom: 19px;
+    padding-top: 7px;
+}
+
+.titl > img {
+    height: 93px;
+}
+
+#mixedSlider .MS-controls .MS-right {
+    right: -123px;
+}
+
+.titl {
+    margin-left: -15px;
+    padding-left: 5px;
+}
+
+h2.blogTitle.ng-binding {
+    font-size: 8px;
+	
+}
+
+#mixedSlider .MS-content .item p {
+    font-size: 7px;
+    
+}
+
+#mixedSlider .MS-controls button {
+    top: 33px;
+}
+.navbar-toggle.collapsed {
+    top: 10px;
+}
+.navbar-brand {
+    font-size: 12px;
+    margin-top: 13px;
+}
+nav.small ul.nav {
+    padding-left: 20px;
+}
 }
 
