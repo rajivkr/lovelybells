@@ -18,11 +18,12 @@ app.controller('VenueController', ['$scope', 'VenueService','$location','$timeou
 	        $scope.states = _.uniqBy($scope.venueList, function (venue) {
 	    	    return venue.state;
 	        });
+	        var myEl = angular.element( document.querySelector( '.demo.empty' ) );
+	        myEl.removeClass('empty');
 	    })
 	    /*$scope.states = _.uniqBy($scope.venueList, function (venue) {
 	    return venue.state;
         });*/
-	   
 		$scope.setVenueID=function(venueId)
 		{
 		

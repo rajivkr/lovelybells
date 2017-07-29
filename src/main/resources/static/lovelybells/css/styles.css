@@ -7,11 +7,11 @@ body {
   color:#000;
   background-color:#f1f1f1;
   font-size:15px;
-   background-image: url(http://affluent-3a0d.kxcdn.com/wp-content/themes/affluent_pro/images/background.png);
-    background-position: left top;
-    background-size: auto;
-    background-repeat: repeat;
-    background-attachment: scroll;
+  background-image: url(http://affluent-3a0d.kxcdn.com/wp-content/themes/affluent_pro/images/background.png);
+  background-position: left top;
+  background-size: auto;
+  background-repeat: repeat;
+  background-attachment: scroll;
 }
 
 
@@ -24,7 +24,6 @@ font-size:26px;
 font-family:"Roboto Condensed",sans-serif;
 font-weight:bold;
 letter-spacing:1px;
-    padding-bottom: 50px;
 color:#c52d2f;
 }
 
@@ -1550,10 +1549,10 @@ span.titl {
     margin-left: 0;
     margin-right: 14px;
     padding-bottom: 10px;
-    width: 32%;
     padding-left: 0;
     padding-right: 0px;
     background:#e6e6e6;
+    margin-top:10px;
 }
 .compare {
     padding-bottom: 15px;
@@ -2266,7 +2265,8 @@ margin-top:10px;
 	
 	h2 {
     font-size: 14px;
-   padding-bottom: 16px;
+    padding-bottom: 16px;
+
     
 }
 .titl > img {
@@ -2462,7 +2462,6 @@ h2.blogTitle.ng-binding {
 
 .titl {
     padding-left: 5px;
-    margin-left: -9px;
 }
 
 #mixedSlider .MS-controls .MS-right {
@@ -2578,4 +2577,121 @@ nav.small ul.nav {
     padding-left: 20px;
 }
 }
+#venueItem .venueImage{
+	height:100%;
+	width:100%;
+}
+.navbar-brand {
+    padding: 11px;
+    font-size: 23px;
+}
 
+@media(max-width:414px)
+{
+	.venue-contents {
+	 margin-top:100px;
+	 
+	}
+}
+@media(max-width:768px){
+	.filter {
+    margin-top: 40px;
+	}
+
+.button-row{
+	margin-bottom:10px;
+}
+.selct {
+    width: 45%;
+}
+
+
+.pcs img {
+	display:none;
+}
+.desc h2 {
+    margin-top: 15px;
+}
+#bx-pager{
+	display:none;
+}
+
+}
+.glyphicon.glyphicon-heart{
+	-webkit-transform: rotate(90deg);
+    -moz-transform: rotate(120deg);
+    -o-transform: rotate(120deg);
+    -ms-transform: rotate(120deg);
+}
+.table {
+  display: table;
+  border-collapse: separate;
+}
+
+.table-row { display:table-row; }
+
+.column {
+  display:table-cell;
+  padding:5px;
+}
+
+
+
+
+
+/* 
+Animated skeleton screen using CSS.
+
+Create shapes using gradients that simulate solids.
+
+Use `:empty` pseduo-class to show skeleton screen background only while container has no content (ex: for the "loading" state). When content is added to the container element, the pseudo-class selector won't match anymore and the skeleton screen will be removed automatically; no need to toggle a separate class on the container.
+
+See: https://developer.mozilla.org/en-US/docs/Web/CSS/:empty
+
+Animating one layer of the background which is a tilted linear gradient with white in the middle to achieve shine effect.
+*/
+	.demo.empty {
+    margin: auto;
+    margin-top:100px;
+		width: 500px;
+		height: 600px; /* change height to see repeat-y behavior */
+		background-image:
+			radial-gradient( circle 50px at 50px 50px, lightgray 99%, transparent 0 ),
+			linear-gradient( 100deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 80% ),
+			linear-gradient( lightgray 20px, transparent 0 ),
+			linear-gradient( lightgray 20px, transparent 0 ),
+			linear-gradient( lightgray 20px, transparent 0 ),
+			linear-gradient( lightgray 20px, transparent 0 );
+
+		background-repeat: repeat-y;
+
+		background-size:
+			100px 200px, /* circle */
+			50px 200px, /* highlight */
+			150px 200px,
+			350px 200px,
+			300px 200px,
+			250px 200px;
+
+		background-position:
+			0 0, /* circle */
+			0 0, /* highlight */
+			120px 0,
+			120px 40px,
+			120px 80px,
+			120px 120px;
+
+		animation: shine 1s infinite;
+	}
+
+	@keyframes shine {
+		to {
+			background-position:
+				0 0,
+				100% 0, /* move highlight to right */
+				120px 0,
+				120px 40px,
+				120px 80px,
+				120px 120px;
+		}
+	}

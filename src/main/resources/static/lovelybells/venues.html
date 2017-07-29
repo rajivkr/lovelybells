@@ -171,7 +171,8 @@
  					
  				<div class="col-sm-9 locat padding-right">
 						
-				<div class="selct"><select class ="ord" ng-model="order" >
+		    <div class ="button-row">
+		    <div class="selct"><select class ="ord" ng-model="order" >
             <option value="-added">Recently Added</option>
             <option value="venueRent">Price (low to high)</option>
             <option value="-venueRent">Price (high to low)</option>
@@ -181,18 +182,18 @@
         </div>
         
         <button type="button" class="btn btn-info btn-lg comp" data-toggle="modal" data-target="#myModal" ng-disabled="venueCompare.length == 0">Compare venues</button>
-
+       </div>
   <!-- venue comparator start -->
   <div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog" ng-class="venueCompare.length == 2 ? 'width2':'width3' ">
+    <div class="modal-dialog" ng-class="venueCompare.length == 2 ? 'width2':'width3'" >
     
       <!-- Modal content-->
       <div class="modal-content">
        
         <div class="modal-body">
-		<div class="container">
-<div class="col-md-12">
-<div class="col-md-4 cmpre" ng-repeat="venue in venueCompare |filter:regionOnly">
+		<div class="">
+<div class="col-sm-12">
+<div class="col-sm-4 cmpre" ng-repeat="venue in venueCompare |filter:regionOnly">
 <div class="compare">
 <h2 class="titl">{{venue.name}}</h2>
 </div>
@@ -221,11 +222,10 @@
    <!-- venue comparator end -->
 				
                
-
-                            <div class="col-md-12 margin-bottom" id="venueItem" ng-repeat="venue in venueList |filter:regionOnly |orderBy:order"  ng-if="$index>=start && $index<end">
-
+                    <div class="demo empty">
+                    <div class="col-md-12 margin-bottom" id="venueItem" ng-repeat="venue in venueList |filter:regionOnly |orderBy:order"  ng-if="$index>=start && $index<end">
 					<div class="col-md-6 gals">
-                   <a href="" ng-click="setVenueID(venue.id)"> <img src="images/gallery/a1.jpg" style="height:231px;width:377px"></a>
+                   <a href="" ng-click="setVenueID(venue.id)"> <img class="venueImage" src="images/gallery/a1.jpg"></a>
                     </div>	
                     	<div class="col-md-6 dtls">
                         <div class="col-md-2 pcs">
@@ -248,6 +248,7 @@
       
      </div>
     
+     </div>
      </div>
      </div>
      

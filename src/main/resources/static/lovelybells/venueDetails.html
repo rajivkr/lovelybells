@@ -2,8 +2,8 @@
 
 <section id="banner">
 <div class="container">
-<div class="col-md-12">
-          <div class="col-md-8 fluid_container">
+<div class="col-sm-12 venue-contents">
+          <div class="col-sm-8 fluid_container">
           <p><a href="#">HOME</a><i class="fa fa-angle-right ryt" aria-hidden="true"></i><span class="a1"><a href="#">VENUE</a><i class="fa fa-angle-right ryt" aria-hidden="true"></i></span><span class="a2">{{venue.name}}</span></p>
           <div class="description">
 <h2 class="headng">About {{venue.name}}</h2>
@@ -35,21 +35,42 @@
 	
 	
 	
-    <div class="col-md-4 dtals">
+    <div class="col-sm-4 dtals">
     <h2>VENUE DETAILS</h2>
 	<div class="detail">
-	<div class="col-md-12 detl">
-    <div class="col-md-6 dtl">
-    <h4>NAME:</h4>
-    <h4>LOCATION:</h4>
-    <h4>PRICE:</h4>
-    <h4>RATING:</h4>
+	<div class="col-xs-12 detl">
+	<div class="table">
+    <div class="table-row">
+    <div class="column">
+     <h4>NAME:</h4>
     </div>
-    <div class="col-md-6 dtl">
-    <h4>{{venue.name}}</h4>
-    <h4>{{venue.city}}</h4>
-    <h4>{{venue.venueRent}}</h4>
+   <div class="column">
+   <h4>{{venue.name}}</h4>
+   </div>
+    </div>
+     <div class="table-row">
+     <div class="column">
+     <h4>LOCATION:</h4>
+     </div>
+     <div class="column"><h4>{{venue.city}}</h4></div>
+     </div>
+     <div class="table-row">
+     <div class="column">
+     <h4>PRICE:</h4>
+     </div>
+     <div class="column"><h4>{{venue.venueRent}}</h4></div>
+     
+     </div>
+     <div class="table-row">
+     <div class="column">
+     <h4>RATING:</h4>
+     </div>
+     <div class="column">
     <h4>4star</h4>
+    </div>
+     </div>
+    
+
     </div>
 	<div class="row"></div>
 	 <h4 class="imp">OTHER HIGHLIGHTS</h4>
@@ -78,8 +99,8 @@
     <div class="row"></div>
     <section id="tab" ng-init="intializePage()">
     <div class="container">
-    <div class="col-md-12">
-    <div class="col-md-8">
+    <div class="col-sm-12">
+    <div class="col-sm-8">
     <div class="tab tab-horiz">
 			<ul class="tab-legend cnt">
             <li class="active">Overview</li>
@@ -91,21 +112,21 @@
 			<ul class="tab-content tabcnt">
 				<li>
 					<!--TAB CONTENT-->
-					<div class="col-md-12">
-					<div class="col-md-4 listing">
+					<div class="col-sm-12">
+					<div class="col-sm-4 listing">
 					<h4>Price Per Plate</h4>
 					 <p><span class="veg"><i class="fa fa-circle" aria-hidden="true"></i>
 </span>VEG <span class="rupee pull-right">Rs. 1,000/-</span><br>
 					 <span class="nonveg"><i class="fa fa-circle" aria-hidden="true"></i>
 </span>NON - VEG <span class="rupee pull-right">Rs. 1,200/-</span><p>
 					</div>
-					<div class="col-md-4 listing">
+					<div class="col-sm-4 listing">
 					<h4>Lodging</h4>
 					<p class="price">Rooms Available</p>
                     <p class="numbr">No. of Rooms:<span class="room">50</span><br>
 					Per Room Price:<span class="room">Rs.12,000 - 13,000</span><p>
 					</div>
-					<div class="col-md-4 listing">
+					<div class="col-sm-4 listing">
 					<h4>Highlights</h4>
 					<p ng-repeat="otherHiglight in venue.otherHighlights" class="highlight">
 					<span ng-class="otherHiglight.isAvailable =='1' ? 'tck fa fa-check':'crs fa fa-times'" aria-hidden="true"></span> 
@@ -120,8 +141,8 @@
 				</li>
 				<li>
 					<!--TAB CONTENT-->
-					<div class="col-md-12">
-					<div class="col-md-6 vegie">
+					<div class="col-sm-12">
+					<div class="col-sm-6 vegie">
 					<h2>VEG</h2>
 					<table class="table table-bordered">
     <thead>
@@ -146,7 +167,7 @@
     </tbody>
   </table>
 					</div>
-					<div class="col-md-6 Nonvegie">
+					<div class="col-sm-6 Nonvegie">
 					<h2>Non - VEG</h2>
 					<table class="table table-bordered">
     <thead>
@@ -175,8 +196,8 @@
 				</li>
 				<li>
 					<!--TAB CONTENT-->
-					<div class="col-md-12">
-					<div class="col-md-4 listing">
+					<div class="col-sm-12">
+					<div class="col-sm-4 listing">
 					<h4 class="rates">Rating Summary</h4>
 					<p>Cleanliness<span class="star pull-right"><i class="fa fa-star" aria-hidden="true"></i>
  <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i></span><br>				
@@ -196,7 +217,7 @@ Services<span class="star pull-right"><i class="fa fa-star" aria-hidden="true"><
 				
 			</ul></div>
 		</div>
-        <div class="col-md-4">
+        <div class="col-sm-4">
         </div>
         </div></div>
         <div class="modal fade" id="loc" role="dialog">
