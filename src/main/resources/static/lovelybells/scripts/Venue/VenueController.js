@@ -18,8 +18,8 @@ app.controller('VenueController', ['$scope', 'VenueService','$location','$timeou
 	        $scope.states = _.uniqBy($scope.venueList, function (venue) {
 	    	    return venue.state;
 	        });
-	        var myEl = angular.element( document.querySelector( '.demo.empty' ) );
-	        myEl.removeClass('empty');
+	        var myEl = angular.element( document.querySelector( '.timeline-wrapper' ) );
+	        myEl.addClass('hide');
 	    })
 	    /*$scope.states = _.uniqBy($scope.venueList, function (venue) {
 	    return venue.state;
